@@ -2,5 +2,121 @@
 
 {% load static %}
 {% block content %}
-<!-- Your page-specific content goes here -->
+<!-- Welcome Section -->
+<div class="welcome-section" style="background-color: #e9ecef;">
+    <div class="container">
+        <h2>Welcome</h2>
+        <div class="row align-items-center"> <!-- Align items vertically center in the row -->
+            <div class="col-md-5"> <!-- Give more space for the image -->
+                <img src="{% static 'images/kristian-smith-roots.jpg' %}" alt="Description of Image" class="img-fluid welcome-image">
+            </div>
+            <div class="col-md-7 welcome-text-container"> <!-- Added the column size to ensure it fits into the row -->
+                <h2>Kristian Smith</h2>
+                <p>I started my career at Anthony Worrall Thompson Delugo's in Soho, London as a young chef, straight after my restaurant training, to gain early experience in my profession. In recent years, I have been based in Stockholm where I was responsible for the culinary creativity at the world-famous restaurant Flippin' Burgers and its sister restaurants Lådan and Dogfood.
+                I have always had a passion for street food, an interest and fascination that has developed stronger over the years. 
+                I am also debuting my first cookbook which will be an in-depth look at Jamaican roots, food and culture. The book will be released in Sweden under the publisher Natur & Kultur in spring 2020.
+                <br>Quote
+                <br>"I respect tradition while daring to push the boundaries."
+                <br>Kristian Smith - Street Gastronomy</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+
+<!-- Cookbook Section -->
+<section class="cookbook-section" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2>Cookbook</h2>
+        <div class="row align-items-center"> <!-- added align-items-center for vertical alignment -->
+            <!-- Text for Cookbook Item -->
+            <div class="col-md-6 cookbook-text">
+                <div class="text-box">
+                    <h3>About this book</h3>
+                    <p>20 years ago, I was a freshman in a restaurant kitchen, a guy who had just finished cooking school in London. That was when my Jamaican dad brought the whole family to the island for the first time. Once there, we didn't end up among the tourists' luxurious hotel complexes - dad showed us the real Jamaica. Living and eating with the locals made me discover my Jamaican roots. The smokey aroma of burning pimento in grills packed with jerk chicken, the spicy fish dishes down by the beach, the pride and joy of cooking - all of which I convey in this book Jamaican food culture is a result of the island's exciting history, and I have made it my mission to spread all the knowledge I have managed to gather.
+                    <br>In Roots, you learn the secrets behind authentic Jamaican cooking.</p>
+                </div>
+            </div>
+            <!-- Image for Cookbook Item -->
+            <div class="col-md-6 cookbook-item">
+                <img src="{% static 'images/swedish-roots-cover%20%281%29.png' %}" alt="Description of Image" class="img-fluid cookbook-image">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider"></div>
+<div class="hero-image-section-jerk">
+    <img src="static/images/jerk-banner.jpg" alt="Description of the Image">
+</div>
+<!-- Recipe Section -->
+<section id="recipe" style="background-color: #e9ecef;">
+    <div class="container py-5">
+        <div class="title-text text-center mb-5">
+            <p class="lead">Recipes</p>
+            <h1>Here are samples of recipes</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 mb-4 single-recipe">
+                <img src="{% static 'images/callaloo.png' %}" alt="a picture of fried callaloo friters stacked up" class="img-fluid rounded">
+                <div class="overlay"></div>
+                <div class="recipe-desc p-3">
+                    <h3 class="mb-3">Callaloo Friters</h3>
+                    <hr>
+                    <p>Vegetarian callaloo fritters are perfect for breakfast or just as a snack.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4 single-recipe">
+                <img src="{% static 'images/escovitch.png' %}" alt="holding a dish of escovitch fish" class="img-fluid rounded">
+                <div class="overlay"></div>
+                <div class="recipe-desc p-3">
+                    <h3 class="mb-3">Escovitch Fish</h3>
+                    <hr>
+                    <p>Escovitch fish is a fish dish that is popular throughout Jamaica. </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4 single-recipe">
+                <img src="{% static 'images/jerk-butter-grilled-corn.png' %}" alt="a picture of chared grilled corn on the cob with jerk butter" class="img-fluid rounded">
+                <div class="overlay"></div>
+                <div class="recipe-desc p-3">
+                    <h3 class="mb-3">Grilled Corn on the Cob</h3>
+                    <hr>
+                    <p>Take the opportunity to grill corn on the cob when you still have the grill on. It's super tasty with just butter, but slightly tastier with jerk seasoning!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4 single-recipe">
+                <img src="{% static 'images/jerk-bbq-sauce.png' %}" alt="a picture of homemade bbq sauce in a jar" class="img-fluid rounded">
+                <div class="overlay"></div>
+                <div class="recipe-desc p-3">
+                    <h3 class="mb-3">Jerk BBQ sauce</h3>
+                    <hr>
+                    <p>There are really, really good flavors in this jerky BBQ sauce.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider"></div>
+
+<!-- Book Section -->
+<section id="book-section" style="background-color: #f8f9fa;">
+    <div class="container text-center py-5">
+        <h2>Order Your Copy</h2>
+        <p class="lead">A journey through flavors and stories.</p>
+
+        <div class="book-display mt-5 d-flex justify-content-center align-items-center">
+            <div class="book-cover mr-5">
+                <img src="{% static 'images/swedish-roots-cover%20%281%29.png' %}" alt="Book Cover" class="img-fluid rounded">
+            </div>
+            <div class="book-info">
+                <h3>Roots Jamaican Food & Culture</h3>
+                <p class="mt-3">Join Kristian on an unforgettable journey through Jamaica's vibrant food and culture. Discover the island's rich history, mouth-watering recipes, and the stories that shaped its unique culinary landscape.</p>
+                <a href="#" class="btn btn-primary mt-4">Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider"></div>
+<div class="hero-image-section">
+    <img src="static/images/carnival-banner.jpg" alt="Description of the Image">
+</div>
 {% endblock %}

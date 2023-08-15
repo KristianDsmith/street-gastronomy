@@ -1,8 +1,411 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto Slab', sans-serif;
-    /* Any other body-specific styles can be added here */
+    background-color: #fff;
 }
 
+.divider {
+    height: 3px;
+    background-color: #28a745;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+section {
+    width: 100vw; 
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* ... (your existing styles) ... */
+
+/* Sections with Full Width Background */
+.welcome-section, 
+.cookbook-section, 
+#book-section {
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* If there's any content inside these sections, ensure they have their own container to control the width and padding of the actual content. Example: */
+.inner-content {
+    max-width: 1200px; /* Or whatever maximum width you prefer */
+    margin: 0 auto; /* Centers the content */
+    padding: 0 20pxpx; /* Some padding on the sides to ensure content doesn't touch the screen edge on small screens */
+}
+
+
+
+
+/* Navigation */
+.custom-navbar {
+    background-color: rgb(216, 216, 216);
+}
+
+.custom-navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 200px;
+}
+
+.custom-navbar .navbar-nav {
+    padding-left: 800px;
+}
+
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-nav .dropdown-toggle {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 50px;
+    position: relative;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .dropdown-toggle:hover {
+    color: #28a745;
+    /* This will change the text color on hover */
+}
+
+.custom-navbar .navbar-nav .nav-link:last-child {
+    margin-right: 0;
+}
+
+
+/* Hero Section */
+
+/* Hero section styles */
+.hero-image {
+    background-image: url('https://res.cloudinary.com/dqe39dixt/image/upload/v1692113299/background-banner_iqelfm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative; 
+}
+
+.hero-logo {
+    position: absolute;  /* Absolutely position the logo within the hero section */
+    top: 25%;            /* Position it at 50% from the top... */
+    right: 80%;           /* ...and 50% from the left */
+    transform: translate(-50%, -50%); /* This ensures the logo is centered regardless of its size */
+    width: 100px;        /* Adjust as per the desired logo size */
+    z-index: 10;         /* To ensure the logo is above other elements, if needed */
+}
+
+.hero-image h1 {
+    color: #fff;
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.hero-image p {
+    color: #fff;
+    font-size: 36px;
+}
+
+/* Welcome Section */
+
+#welcome-section {
+    background-color: #E0F7FA;
+    margin-bottom: 0;
+}
+
+.welcome-section {
+    padding: 50px 0; /* Padding on top and bottom */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+/* The text container with an outline */
+.welcome-text-container {
+    border: 1px solid #333;  /* Solid border */
+    padding: 20px;  /* Space inside the box */
+    max-width: 600px; /* Max width of the box */
+    text-align: left; /* Align text to the left */
+    margin-top: 40px; /* Push the box down */
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    color: #333; /* Dark gray */
+    margin-bottom: 20px; /* Space between the heading and the paragraph */
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #666; /* Medium gray */
+}
+
+.welcome-image {
+    width: 380px; 
+    max-width: 100%;
+    margin-right: 20px; /* Add some space between the image and the text box */
+}
+
+/* Drop shadow for the text container and the image */
+.welcome-text-container,
+.welcome-image {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Horizontal offset, vertical offset, blur radius, and shadow color */
+    transition: all 0.3s ease;  /* Transition effect for smooth transformations */
+}
+
+/* Image zoom-in effect on hover */
+.welcome-image:hover {
+    transform: scale(1.05);  /* Increase the size by 5% */
+}
+
+/* Optional: Adding a hover effect for the container can help in visual interactivity */
+.welcome-text-container:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);  /* Slightly intense shadow on hover for a lifted effect */
+}
+
+/* Cookbook Section */
+
+.cookbook-section {
+    background-color: #fff;  /* Slightly grayish background */
+    padding: 60px 0;  /* Padding on top and bottom */
+}
+
+.cookbook-section h2 {
+    font-size: 36px;
+    color: #333;  /* Dark gray */
+    text-align: center;
+    margin-bottom: 40px;  /* Space below the title */
+}
+
+.cookbook-item {
+    margin-bottom: 40px;  /* Space between each cookbook item */
+}
+
+.cookbook-image {
+    width: 380px;
+    border-radius: 5px;  /* Slight rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Drop shadow */
+    transition: all 0.3s ease;  /* Smooth transition */
+    margin-bottom: 20px;  /* Space between image and text */
+}
+
+.cookbook-image:hover {
+    transform: scale(1.05);  /* Zoom in effect */
+}
+
+.cookbook-text .text-box {
+    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Light shadow */
+    max-width: 500px;
+}
+
+.cookbook-text h3 {
+    font-size: 24px;
+    color: #444;  /* Darker text for recipe name */
+    margin-top: 20px;  /* Space above the recipe name */
+    margin-bottom: 15px;
+}
+
+.cookbook-text p {
+    font-size: 16px;
+    color: #666;  /* Grayish text for description */
+}
+
+/* Recipe Section */
+
+/* Reset margins and paddings for troubleshooting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* this ensures border and padding are included in element's total width/height */
+}
+
+#recipe {
+    width: 100vw;
+    padding: 70px 0;
+    background-color: #E8F5E9;
+    position: relative; /* Added for potential positioning fixes */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%; /* ensures the container takes the full width of its parent up to its max-width */
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+
+.single-recipe {
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    flex-basis: calc(50% - 10px); /* This ensures two items per row with a bit of space */
+}
+
+.single-recipe:nth-child(odd) {
+    margin-right: 20px; /* This adds space between two items in the same row */
+}
+
+.single-recipe img {
+    width: 100%;
+    height: 100%; /* Set a specific height to make the images bigger */
+    object-fit: cover; /* This ensures the image covers the entire space without distortion */
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*... rest of your CSS stays unchanged ...*/
+
+
+.overlay {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#59dd2d);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.single-recipe:hover .overlay {
+    opacity: 1;
+}
+
+.recipe-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 10%; /* Adjusted from 0% to 10% to give more space at the bottom */
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.7); /* Added a slight background for better readability */
+    border-radius: 7px;
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.recipe-desc p {
+    font-size: 14px;
+}
+
+.single-recipe:hover .recipe-desc {
+    opacity: 1;
+}
+
+/* Book Section*/
+
+#book-section {
+    background: #f9f9f9;
+    color: #333;
+}
+
+#book-section .book-display {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#book-section .book-cover img {
+    max-width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#book-section .book-cover img:hover {
+    transform: scale(1.05);
+}
+
+#book-section .book-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+#book-section .btn-success {
+    background-color: #59dd2d;
+    border-color: #59dd2d;
+}
+
+#book-section .btn-success:hover {
+    background-color: #45c91b;
+    border-color: #45c91b;
+}
+
+/* Hero section */
+
+.hero-image-section-jerk {
+    width: 100vw;
+    height:700px; 
+    overflow: hidden; /* Ensures no horizontal scroll bar if the image is bigger than the viewport width */
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: -20px;
+}
+
+.hero-image-section-jerk img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any default spacing around the image */
+}
+
+.hero-image-section {
+    width: 100vw;
+    height:700px; 
+    overflow: hidden; /* Ensures no horizontal scroll bar if the image is bigger than the viewport width */
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: -20px;
+}
+
+.hero-image-section img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any default spacing around the image */
+}
 
 
 /* Footer */
@@ -41,31 +444,11 @@ body {
     display: inline-block;
 }
 
-.custom-footer ul li a::after,
-.custom-footer p a::after,
-.custom-footer .col-12 a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #28a745;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-    transform-origin: left;
-    visibility: hidden;
-}
-
-.custom-footer ul li a:hover::after,
-.custom-footer p a:hover::after,
-.custom-footer .col-12 a:hover::after {
-    visibility: visible;
-    width: 100%;
-}
-
 .custom-footer ul li a:hover,
 .custom-footer p a:hover,
 .custom-footer .col-12 a:hover {
+    color: #28a745;
+    /* This will change the text color on hover */
     text-decoration: none;
 }
 
@@ -79,11 +462,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Remove underline effect on hover for social icons */
-.list-inline-item a::after {
-    display: none;
-}
-
 /* Change social icon color on hover */
 .list-inline-item a:hover i {
     color: #218f3b;
@@ -93,7 +471,6 @@ body {
 .list-inline-item i {
     font-size: 24px;
 }
-
 /* Font Awesome icons adjustment */
 i {
     margin-right: 5px;
