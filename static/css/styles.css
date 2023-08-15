@@ -369,9 +369,31 @@ hr {
 
 /* Hero section */
 
+@keyframes hero-zoom {
+    0% {
+        transform: scale(1);  
+    }
+    100% {
+        transform: scale(1.1);  
+    }
+}
+
+.not-animated img {
+    animation-name: none;
+}
+
+/* Once the "animate" class is added, the animation will play */
+.animate img {
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
 .hero-image-section-jerk {
     width: 100vw;
-    height:700px; 
+    height:600px; 
     overflow: hidden; /* Ensures no horizontal scroll bar if the image is bigger than the viewport width */
     box-sizing: border-box;
     position: relative;
@@ -380,12 +402,14 @@ hr {
     margin-left: -50vw;
     margin-right: -50vw;
     margin-bottom: -20px;
+    
 }
 
 .hero-image-section-jerk img {
     width: 100%;
     height: auto;
     display: block; /* Removes any default spacing around the image */
+    
 }
 
 .hero-image-section {
