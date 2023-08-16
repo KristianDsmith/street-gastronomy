@@ -7,7 +7,7 @@ body, html {
 
 .divider {
     height: 3px;
-    background-color: #28a745;
+    background-color: #59dd2d;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -78,7 +78,7 @@ section {
 
 .custom-navbar .navbar-nav .nav-link:hover,
 .custom-navbar .navbar-nav .dropdown-toggle:hover {
-    color: #28a745;
+    color: #59dd2d;
     /* This will change the text color on hover */
 }
 
@@ -119,6 +119,7 @@ section {
     font-size: 54px;
     font-weight: bold;
     margin-bottom: 0;
+    
 }
 
 .hero-image p {
@@ -129,109 +130,176 @@ section {
 /* Welcome Section */
 
 #welcome-section {
-    background-color: #E0F7FA;
+    background-color: #fff;
     margin-bottom: 0;
 }
 
 .welcome-section {
-    padding: 50px 0; /* Padding on top and bottom */
+    padding: 25px 0 60px 0;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    justify-content: center;
+    align-items: start;
+    /* Align children to the top */
 }
 
-/* The text container with an outline */
 .welcome-text-container {
-    border: 1px solid #333;  /* Solid border */
-    padding: 20px;  /* Space inside the box */
-    max-width: 600px; /* Max width of the box */
-    text-align: left; /* Align text to the left */
-    margin-top: 40px; /* Push the box down */
+    flex: 1;
+    /* Make sure both text and image take equal space */
+    padding-top: 40px;
+    height: 600px;
+    /* Example height. Adjust as necessary. */
+    box-sizing: border-box;
+    /* Ensure padding doesn't increase box size */
+    text-align: left;
+    max-width: 50%;
+    background-color: white;
+    /* Make the text box background white */
 }
 
 .welcome-section h2 {
-    font-size: 32px;
-    color: #333; /* Dark gray */
-    margin-bottom: 20px; /* Space between the heading and the paragraph */
+    font-size: 28px;
+    color: #333;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.welcome-section h2::after {
+    content: "";
+    /* Required for the pseudo-element to be generated */
+    position: absolute;
+    /* Absolute positioning relative to the h2 */
+    left: 0;
+    /* Start from the leftmost point of the h2 */
+    right: 0;
+    /* End at the rightmost point of the h2 */
+    bottom: -5px;
+    /* Position just below the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: #59dd2d;
+    /* Color of the underline */
 }
 
 .welcome-section p {
     font-size: 18px;
-    color: #666; /* Medium gray */
+    color: #666;
 }
 
 .welcome-image {
-    width: 380px; 
-    max-width: 100%;
-    margin-right: 20px; /* Add some space between the image and the text box */
+    flex: 1;
+    /* Make sure both text and image take equal space */
+    width: auto;
+    height: 600px;
+    /* Ensure it's the same height as the text box */
+    object-fit: cover;
+    /* Preserve aspect ratio of the image while filling the container */
+    margin-right: 20px;
 }
 
-/* Drop shadow for the text container and the image */
+/* Box shadows and hover effects */
+
 .welcome-text-container,
 .welcome-image {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Horizontal offset, vertical offset, blur radius, and shadow color */
-    transition: all 0.3s ease;  /* Transition effect for smooth transformations */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* Image zoom-in effect on hover */
 .welcome-image:hover {
-    transform: scale(1.05);  /* Increase the size by 5% */
+    transform: scale(1.05);
 }
 
-/* Optional: Adding a hover effect for the container can help in visual interactivity */
 .welcome-text-container:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);  /* Slightly intense shadow on hover for a lifted effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
-
 /* Cookbook Section */
 
 .cookbook-section {
-    background-color: #fff;  /* Slightly grayish background */
-    padding: 60px 0;  /* Padding on top and bottom */
+    background-color: #fff;
+    padding: 10px 0 60px 0;
+    position: relative;
 }
 
 .cookbook-section h2 {
-    font-size: 36px;
-    color: #333;  /* Dark gray */
-    text-align: center;
-    margin-bottom: 40px;  /* Space below the title */
+    font-size: 28px;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.cookbook-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #59dd2d;
+    /* Change to desired shade of green */
+}
+
+.row.align-items-center {
+    display: flex;
+    align-items: start;
+    /* Aligns children to the top */
+}
+
+.cookbook-text,
+.cookbook-item {
+    flex: 1;
+    box-sizing: border-box;
+    width: 50%;
+    height: 500px;
+    /* Maintaining the previous height */
+    position: relative;
 }
 
 .cookbook-item {
-    margin-bottom: 40px;  /* Space between each cookbook item */
+    display: flex;
+    align-items: start;
+    /* Aligns image to the top */
+    justify-content: center;
 }
 
 .cookbook-image {
-    width: 380px;
-    border-radius: 5px;  /* Slight rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Drop shadow */
-    transition: all 0.3s ease;  /* Smooth transition */
-    margin-bottom: 20px;  /* Space between image and text */
+    width: auto;
+    max-height: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .cookbook-image:hover {
-    transform: scale(1.05);  /* Zoom in effect */
+    transform: scale(1.05);
 }
 
 .cookbook-text .text-box {
-    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Light shadow */
-    max-width: 500px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 468px;
+    /* Adjusted height */
+    position: absolute;
+    top: 0;
+    /* Aligns the text box to the top */
 }
 
 .cookbook-text h3 {
     font-size: 24px;
-    color: #444;  /* Darker text for recipe name */
-    margin-top: 20px;  /* Space above the recipe name */
+    color: #444;
+    margin-top: 0;
     margin-bottom: 15px;
 }
 
 .cookbook-text p {
     font-size: 16px;
-    color: #666;  /* Grayish text for description */
+    color: #666;
 }
-
 /* Recipe Section */
 
 /* Reset margins and paddings for troubleshooting */
@@ -241,15 +309,41 @@ section {
     box-sizing: border-box; /* this ensures border and padding are included in element's total width/height */
 }
 
+
 #recipe {
     width: 100vw;
-    padding: 70px 0;
+    padding: 20px 0;
     background-color: #E8F5E9;
     position: relative; /* Added for potential positioning fixes */
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+}
+
+#recipe .title-text h2 {
+    display: inline-block;
+    /* Allows the pseudo-element to fit the content width */
+    position: relative;
+    /* Needed for absolute positioning of the pseudo-element */
+    margin-bottom: 20px;
+}
+
+#recipe .title-text h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    /* Full width of the content */
+    height: 3px;
+    background-color: #59dd2d;
+    margin-top: 10px;
+    /* Spacing between the text and the underline */
+    position: absolute;
+    /* Position it relative to the h2 */
+    bottom: -10px;
+    /* Position it below the h2 */
+    left: 0;
+    /* Start from the left edge */
 }
 
 .container {
@@ -281,8 +375,6 @@ section {
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
-
-/*... rest of your CSS stays unchanged ...*/
 
 
 .overlay {
@@ -471,7 +563,7 @@ hr {
 .custom-footer ul li a:hover,
 .custom-footer p a:hover,
 .custom-footer .col-12 a:hover {
-    color: #28a745;
+    color: #59dd2d;
     /* This will change the text color on hover */
     text-decoration: none;
 }
@@ -488,7 +580,7 @@ hr {
 
 /* Change social icon color on hover */
 .list-inline-item a:hover i {
-    color: #218f3b;
+    color: #59dd2d;
 }
 
 /* Increase the social icon size */
@@ -509,5 +601,5 @@ i {
 }
 
 .fa-heart-green {
-    color: green;
+    color: #59dd2d;
 }
