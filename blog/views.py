@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from blog.models import BlogPost
 
 
 def home(request):
@@ -6,12 +7,12 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'about.html')
-
+    return render(request, 'index.html')
 
 
 def blog(request):
-    return render(request, 'blog.html')
+    blog_posts = BlogPost.objects.all()
+    return render(request, 'blog.html', {'blog_posts': blog_posts})
 
 
 def contact(request):

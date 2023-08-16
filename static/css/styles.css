@@ -5,6 +5,11 @@ body, html {
     background-color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .divider {
     height: 3px;
     background-color: #59dd2d;
@@ -422,20 +427,57 @@ hr {
     opacity: 1;
 }
 
-/* Book Section*/
+/* Book Section */
 
 #book-section {
     background: #f9f9f9;
     color: #333;
 }
 
+#book-section h2 {
+    font-size: 24px; /* This is just an example size. Adjust as needed. */
+}
+
+
+#book-section .container {
+    text-align: left; /* Aligns the text to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns container's children to the start */
+}
+
+#book-section h2, #book-section p.lead {
+    align-self: flex-start; /* Aligns these elements to the start of their container */
+}
+
+#book-section h2 {
+    position: relative;
+    display: inline-block; /* Makes the element only as wide as the text */
+}
+
+#book-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Spacing between text and underline */
+    left: 0;
+    height: 3px; /* Thickness of the underline */
+    width: 100%; /* Full width of the text */
+    background-color: #59dd2d; /* Green color */
+}
+
+
 #book-section .book-display {
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap; /* Prevents items from wrapping, ensuring they stay in a single row */
     gap: 2rem;
+    align-items: start; /* Aligns children at the top */
+    width: 100%; /* Ensures the book display takes up the full width */
 }
 
 #book-section .book-cover img {
-    max-width: 250px;
+    max-width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Ensures image fits the given dimensions */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -446,18 +488,29 @@ hr {
 
 #book-section .book-info {
     flex: 1;
-    max-width: 600px;
+    width: 100%; /* Same width as the image */
+    height: 500px; /* Same height as the image */
+    background: #ffffff; 
+    padding: 20px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left; 
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#book-section .btn-success {
+#book-section .btn-primary {
     background-color: #59dd2d;
     border-color: #59dd2d;
+    align-self: flex-start; /* Aligns the button to the left within its container */
 }
 
-#book-section .btn-success:hover {
+#book-section .btn-primary:hover {
     background-color: #45c91b;
     border-color: #45c91b;
 }
+
 
 /* Hero section */
 
@@ -506,8 +559,8 @@ hr {
 
 .hero-image-section {
     width: 100vw;
-    height:700px; 
-    overflow: hidden; /* Ensures no horizontal scroll bar if the image is bigger than the viewport width */
+    height: 700px; 
+    overflow: hidden;
     box-sizing: border-box;
     position: relative;
     left: 50%;
@@ -520,7 +573,22 @@ hr {
 .hero-image-section img {
     width: 100%;
     height: auto;
-    display: block; /* Removes any default spacing around the image */
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 60px;  /* Increased padding at the top */
+    left: 200px;  /* 200px padding from the left */
+    color: white;
+    text-align: left;
+    z-index: 1;
+}
+
+.hero-text h2 {
+    border-bottom: 3px solid #59dd2d;  /* Green underline */
+    padding-bottom: 5px;  /* Creates a little space between the text and the underline */
+    display: inline-block;  /* Necessary to prevent the underline from spanning the full width */
 }
 
 
@@ -529,6 +597,8 @@ hr {
     background-color: rgb(216, 216, 216);
     padding: 30px 0;
     color: #555;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .custom-footer h5 {
@@ -603,3 +673,47 @@ i {
 .fa-heart-green {
     color: #59dd2d;
 }
+
+/* Blog - Page */
+
+/* Blog - Page */
+
+.blog-post {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.post-title {
+    margin: 0;
+    margin-bottom: 20px;  /* Space below the title */
+    color: #333;
+    text-decoration: underline #59dd2d; /* Green underline effect */
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+    padding: 5px 10px;
+    background-color: #59dd2d; /* Green button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.post-image {
+    display: block;
+    margin: 0 auto 20px auto; /* Space below the image */
+    width: 300px; 
+    height: auto;
+}
+
+.post-body {
+    margin: 0;
+    color: #666;
+    display: block;
+}
+
+
+
+
+

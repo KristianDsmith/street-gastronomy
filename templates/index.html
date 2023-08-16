@@ -29,7 +29,7 @@
 <div class="divider"></div>
 
 <!-- Cookbook Section -->
-<section class="cookbook-section" style="background-color: #f8f9fa;">
+<section id="about-section" class="cookbook-section" style="background-color: #f8f9fa;">
     <div class="container">
         <h2>Cookbook</h2>
         <div class="row align-items-center"> <!-- added align-items-center for vertical alignment -->
@@ -51,7 +51,7 @@
 </section>
 <div class="divider"></div>
 <div class="hero-image-section-jerk">
-    <img src="static/images/jerkbbq-banner.jpg" alt="Jerk chicken ready to eat straight from the grill">
+    <img src="{% static 'images/jerkbbq-banner.jpg' %}" alt="jerk chicken on the grill">
 </div>
 <div class="divider"></div>
 
@@ -104,6 +104,7 @@
 </section>
 <div class="divider"></div>
 
+
 <!-- Book Section -->
 <section id="book-section" style="background-color: #f8f9fa;">
     <div class="container text-center py-5">
@@ -115,15 +116,25 @@
                 <img src="{% static 'images/roots-english-cover.png' %}" alt="Roots english book cover" class="img-fluid rounded">
             </div>
             <div class="book-info">
-                <h3>Roots Jamaican Food & Culture</h3>
-                <p class="mt-3">Join Kristian on an unforgettable journey through Jamaica's vibrant food and culture. Discover the island's rich history, mouth-watering recipes, and the stories that shaped its unique culinary landscape.</p>
-                <a href="#" class="btn btn-primary mt-4">Order Now</a>
+                <h2>Roots Jamaican Food & Culture</h2>
+                <p class="mt-3">Join Kristian Smith on an unforgettable journey through Jamaica's vibrant food and culture. Explore mouth-watering recipes that are not just meals but stories, memories, and traditions handed down through generations.</p>
+                <p>Delve into the diverse flavours, from the fiery heat of scotch bonnet peppers in traditional jerk dishes to the sweet undertones of rum-infused desserts. Experience the island's culinary versatility, where coconut, yam, plantains, and an array of spices play pivotal roles in dishes celebrated in homes and gatherings.</p>
+                <p>With every page, Kristian invites you to immerse yourself in the rhythmic pulse of Jamaica. This isn't just a cookbook; it's an ode to a nation's soul, captured through its flavours and tales.</p>
+                <p>Roots will be published in Englis buy Ginko Press in the fall 2023!</p>
+                <a href="#" class="btn btn-primary mt-4">Soon</a>
             </div>
         </div>
     </div>
 </section>
 <div class="divider"></div>
-<div class="hero-image-section">
-    <img src="static/images/carnival-banner.jpg" alt="three woman enjoying Notting Hill carnvival">
-</div>
+<a href="{% url 'blog' %}">
+    <div class="hero-image-section">
+        <img src="{% static 'images/carnival-banner.jpg' %}" alt="Carnival Banner">
+        <div class="hero-text">
+            <h2>My Blog</h2>
+            <p>Explore Kristian Smith's culinary chronicles, a blog blending Jamaican gastronomy with personal insights, 
+            <br>whisking readers into a world of flavor and tradition.</p>
+        </div>
+    </div>
+</a>
 {% endblock %}
