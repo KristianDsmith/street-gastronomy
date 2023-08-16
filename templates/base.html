@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,25 +7,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Gastronomy</title>
-    <!-- Bootstrap CSS -->
+    <!-- Fonts and Bootstrap CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-
-
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg custom-navbar">
         <a class="navbar-brand" href="#">Street Gastronomy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,19 +33,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                </li>
                 <!-- Dropdown for language selection -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <a class="dropdown-item" href="?lang=en">English</a>
-                        <a class="dropdown-item" href="?lang=se">Swedish</a>
-                        <!-- Add more languages as needed -->
+                    <a class="dropdown-item" href="{% url 'english' %}">English</a>
+                    <a class="dropdown-item" href="{% url 'swedish' %}">Swedish</a>
+                    <a class="dropdown-item" href="{% url 'german' %}">German</a>
+
                     </div>
                 </li>
             </ul>
@@ -67,7 +57,7 @@
     
     <div class="container">
         {% block content %}
-        <!-- Other content can go here -->
+        <!-- Content from extended templates will appear here -->
         {% endblock %}
     </div>
     <footer class="custom-footer mt-5 py-4">
@@ -82,12 +72,9 @@
                     </p>
                     <h6>Social links</h6>
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="https://www.instagram.com/streetgastronomyofc/"
-                                target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.facebook.com/streetgastronomy" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.pinterest.se/streetgastronomy/" target="_blank"><i
-                                    class="fab fa-pinterest"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/streetgastronomyofc/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/streetgastronomy" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.pinterest.se/streetgastronomy/" target="_blank"><i class="fab fa-pinterest"></i></a></li>
                     </ul>
                 </div>
     
@@ -95,9 +82,7 @@
                 <div class="col-md-4">
                     <h5>Order your Cookbook</h5>
                     <p>
-                        Follow the links in the order section to order online.
-                        Choose the book specific to your language.
-                        I hope you enjoy the wonderful Jamaican flavors.<br>
+                        Follow the links in the order section to order online. Choose the book specific to your language. I hope you enjoy the wonderful Jamaican flavors.<br>
                         One Love! <i class="fas fa-heart fa-heart-red"></i>
                         <i class="fas fa-heart fa-heart-yellow"></i>
                         <i class="fas fa-heart fa-heart-green"></i>
@@ -125,42 +110,35 @@
         </div>
     </footer>
 
-
+    <!-- Intersection Observer Script -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    let observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            // If the item is in the viewport
-            if(entry.isIntersecting) {
-                entry.target.classList.remove('not-animated');
-                entry.target.classList.add('animate');
-                observer.unobserve(entry.target);
-            }
+        document.addEventListener("DOMContentLoaded", function() {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // If the item is in the viewport
+                    if(entry.isIntersecting) {
+                        entry.target.classList.remove('not-animated');
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            // Watching all elements with the specified classes
+            const classesToWatch = ['.hero-image', '.hero-image-section-jerk', '.hero-image-section'];
+
+            classesToWatch.forEach(className => {
+                document.querySelectorAll(className).forEach(section => {
+                    section.classList.add('not-animated');
+                    observer.observe(section);
+                });
+            });
         });
-    });
-
-    // Watching all elements with the specified classes
-    const classesToWatch = ['.hero-image', '.hero-image-section-jerk', '.hero-image-section'];
-
-    classesToWatch.forEach(className => {
-        document.querySelectorAll(className).forEach(section => {
-            section.classList.add('not-animated');
-            observer.observe(section);
-        });
-    });
-});
-
-
     </script>
-
-
-
-
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -14,6 +14,11 @@ def blog(request):
     blog_posts = BlogPost.objects.all()
     return render(request, 'blog.html', {'blog_posts': blog_posts})
 
+def english(request):
+    return render(request, 'index.html')
 
-def contact(request):
-    return render(request, 'contact.html')
+def swedish(request):
+    return render(request, 'swedish.html')
+
+def german(request):
+    return render(request, 'german.html')
