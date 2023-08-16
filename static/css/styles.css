@@ -65,11 +65,13 @@ section {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
-    margin-left: 200px;
+    margin-left: 50px;
+    height: 50px;
 }
 
 .custom-navbar .navbar-nav {
     padding-left: 800px;
+    height: 50px;
 }
 
 .custom-navbar .navbar-nav .nav-link,
@@ -112,16 +114,16 @@ section {
 
 .hero-logo {
     position: absolute;  /* Absolutely position the logo within the hero section */
-    top: 25%;            /* Position it at 50% from the top... */
-    right: 80%;           /* ...and 50% from the left */
+    top: 10%;            /* Position it at 50% from the top... */
+    right: 90%;           /* ...and 50% from the left */
     transform: translate(-50%, -50%); /* This ensures the logo is centered regardless of its size */
-    width: 100px;        /* Adjust as per the desired logo size */
+    width: 60px;        /* Adjust as per the desired logo size */
     z-index: 10;         /* To ensure the logo is above other elements, if needed */
 }
 
 .hero-image h1 {
     color: #fff;
-    font-size: 54px;
+    font-size: 44px;
     font-weight: bold;
     margin-bottom: 0;
     
@@ -218,6 +220,19 @@ section {
 .welcome-text-container:hover {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+.german-text-container {
+    max-width: 70%; /* Adjust to your preference */
+    height: 650px;
+}
+
+.german-welcome-image {
+    height: 100%;  /* make the image height same as its container */
+    max-height: 650px;  /* Restrict the maximum height */
+    width: auto;  /* Keep the width automatically adjusted */
+    object-fit: cover;  /* Preserve the image's aspect ratio */
+}
+
 /* Cookbook Section */
 
 .cookbook-section {
@@ -329,6 +344,22 @@ section {
 .cookbook-text .swedish  {
     height: 488px; /* Increased by 20px for the Swedish version */
 }
+
+.german-cookbook-textbox {
+    height: auto;  /* Adjust the height based on content */
+    min-height: 488px;  /* Minimum height */
+    padding: 20px;  /* Inner spacing for the content */
+    box-sizing: border-box;  /* To include padding in total height */
+}
+
+.german-cookbook-image {
+    height: auto;  /* Adjust the height based on the image's aspect ratio */
+    min-height: 488px;  /* Minimum height */
+    object-fit: cover;  /* To ensure the image covers the entire container */
+    box-sizing: border-box;  /* To ensure padding and border are included in total height */
+}
+
+
 
 
 /* Recipe Section */
@@ -535,6 +566,18 @@ hr {
 #book-section .btn-primary:hover {
     background-color: #45c91b;
     border-color: #45c91b;
+}
+
+.german-book-info {
+    height: auto; 
+}
+
+
+.german-book-image {
+    height: 100%;  /* Set a height for the image to match the text box. */
+    object-fit: cover;  /* Ensure the image covers the entire container while maintaining its aspect ratio. */
+    box-sizing: border-box;  /* To ensure padding and border are included in total height. */
+    margin-right: 20px;  /* Provide some space between the image and the text box if they're side by side. Adjust if necessary. */
 }
 
 
