@@ -23,9 +23,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('blog/', views.blog, name='blog'),
-    path('', views.english, name='english'),
-    path('swedish/', views.swedish, name='swedish'),
-    path('german/', views.german, name='german'),
+    path('en/', views.index, name='index_en'),
+    path('se/', views.swedish, name='index_se'),
+    path('de/', views.german, name='index_de'),
+    path('se/about/', views.about_se, name='about_se'),
+    path('de/about/', views.about_de, name='about_de'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

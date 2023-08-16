@@ -243,7 +243,7 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #59dd2d;
     /* Change to desired shade of green */
 }
@@ -256,6 +256,16 @@ section {
 
 .cookbook-text,
 .cookbook-item {
+    flex: 1;
+    box-sizing: border-box;
+    width: 50%;
+    height: 500px;
+    /* Maintaining the previous height */
+    position: relative;
+}
+
+.cookbook-text,
+.cookbook-item-se {
     flex: 1;
     box-sizing: border-box;
     width: 50%;
@@ -305,6 +315,22 @@ section {
     font-size: 16px;
     color: #666;
 }
+
+.cookbook-item-se .cookbook-image {
+    height: 488px;
+    width: auto; 
+    object-fit: cover;
+}
+
+.cookbook-item-se {
+    margin-left: 100px; 
+}
+
+.cookbook-text .swedish  {
+    height: 488px; /* Increased by 20px for the Swedish version */
+}
+
+
 /* Recipe Section */
 
 /* Reset margins and paddings for troubleshooting */
@@ -339,7 +365,7 @@ section {
     display: block;
     width: 100%;
     /* Full width of the content */
-    height: 3px;
+    height: 2px;
     background-color: #59dd2d;
     margin-top: 10px;
     /* Spacing between the text and the underline */
@@ -460,7 +486,7 @@ hr {
     position: absolute;
     bottom: -5px; /* Spacing between text and underline */
     left: 0;
-    height: 3px; /* Thickness of the underline */
+    height: 2px; /* Thickness of the underline */
     width: 100%; /* Full width of the text */
     background-color: #59dd2d; /* Green color */
 }
@@ -586,7 +612,7 @@ hr {
 }
 
 .hero-text h2 {
-    border-bottom: 3px solid #59dd2d;  /* Green underline */
+    border-bottom: 2px solid #59dd2d;  /* Green underline */
     padding-bottom: 5px;  /* Creates a little space between the text and the underline */
     display: inline-block;  /* Necessary to prevent the underline from spanning the full width */
 }
