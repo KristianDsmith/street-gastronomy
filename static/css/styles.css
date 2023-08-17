@@ -51,7 +51,7 @@ section {
 .inner-content {
     max-width: 1200px; /* Or whatever maximum width you prefer */
     margin: 0 auto; /* Centers the content */
-    padding: 0 20pxpx; /* Some padding on the sides to ensure content doesn't touch the screen edge on small screens */
+    padding: 0 20px; /* Some padding on the sides to ensure content doesn't touch the screen edge on small screens */
 }
 
 
@@ -82,6 +82,7 @@ section {
     font-weight: bold;
     margin-right: 50px;
     position: relative;
+    
 }
 
 .custom-navbar .navbar-nav .nav-link:hover,
@@ -93,6 +94,35 @@ section {
 .custom-navbar .navbar-nav .nav-link:last-child {
     margin-right: 0;
 }
+
+.navbar-collapse {
+    height: auto;
+    min-height: 300px;
+    /* adjust as needed */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+@media (max-width: 1200px){
+    
+    .custom-navbar .navbar-nav {
+       
+        padding-left: 550px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .custom-navbar .navbar-nav {
+
+        padding-left: 375px;
+    }
+}
+
+
 
 
 /* Hero Section */
@@ -135,6 +165,7 @@ section {
     font-size: 36px;
 }
 
+
 /* Welcome Section */
 
 #welcome-section {
@@ -148,6 +179,8 @@ section {
     justify-content: center;
     align-items: start;
     /* Align children to the top */
+    flex-direction: row;
+    
 }
 
 .welcome-text-container {
@@ -360,8 +393,101 @@ section {
     box-sizing: border-box;  /* To ensure padding and border are included in total height */
 }
 
+@media (max-width: 768px) {
+    .hero-image {
+        height: 400px;
+    }
 
+    .hero-logo {
+        top: 10%;
+        right: 90%;
+        width: 45px;
+    }
 
+    .hero-image h1 {
+        font-size: 34px;
+
+    }
+
+    .hero-image p {
+        font-size: 26px;
+    }
+
+    .welcome-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .welcome-image {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .welcome-text-container {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .cookbook-section h2 {
+        font-size: 20px;
+    }
+
+    .cookbook-text,
+    .cookbook-item {
+        width: 50%;
+        height: 300px;
+    }
+
+    .cookbook-text .text-box {
+        width: 100%;
+        height: 375px;
+    }
+
+    .cookbook-image {
+        width: 90%;
+        height: auto;
+        min-height: 375px;
+        object-fit: cover;
+    }
+
+    .cookbook-text,
+    .cookbook-item-se {
+        width: 50%;
+        height: 325px;
+    }
+
+    .cookbook-image-se {
+        width: 90%;
+        height: auto;
+        min-height: 375px;
+        object-fit: cover;
+    }
+
+    .cookbook-text h3 {
+        font-size: 20px;
+    }
+    
+    .cookbook-text p {
+        font-size: 12px;
+    }
+
+} 
 
 /* Recipe Section */
 
@@ -485,6 +611,9 @@ hr {
     opacity: 1;
 }
 
+
+
+
 /* Book Section */
 
 #book-section {
@@ -582,6 +711,7 @@ hr {
 }
 
 
+
 /* Hero section */
 
 @keyframes hero-zoom {
@@ -661,6 +791,131 @@ hr {
     display: inline-block;  /* Necessary to prevent the underline from spanning the full width */
 }
 
+@media (max-width: 768px) {
+    .hero-image {
+        height: 400px;
+    }
+
+    .hero-logo {
+        top: 10%;
+        right: 90%;
+        width: 45px;
+    }
+
+    .hero-image h1 {
+        font-size: 34px;
+
+    }
+
+    .hero-image p {
+        font-size: 26px;
+    }
+
+    .welcome-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .welcome-image {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .welcome-text-container {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .cookbook-section h2 {
+        font-size: 20px;
+    }
+
+    .cookbook-text,
+    .cookbook-item {
+        width: 50%;
+        height: 300px;
+    }
+
+    .cookbook-text .text-box {
+        width: 100%;
+        height: 375px;
+    }
+
+    .cookbook-image {
+        width: 90%;
+        height: auto;
+        min-height: 375px;
+        object-fit: cover;
+    }
+
+    .cookbook-text,
+    .cookbook-item-se {
+        width: 50%;
+        height: 325px;
+    }
+
+    .cookbook-image-se {
+        width: 90%;
+        height: auto;
+        min-height: 375px;
+        object-fit: cover;
+    }
+
+    .cookbook-text h3 {
+        font-size: 20px;
+    }
+
+    .cookbook-text p {
+        font-size: 12px;
+    }
+
+    #book-section h2 {
+        font-size: 20px;
+    }
+
+    #book-section .book-cover img {
+        max-width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #book-section .book-info {
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+
+    }
+
+    .mt-3 {
+        font-size: 12px;
+    }
+
+    .hero-image-section-jerk {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .hero-image-section img {
+        width: 100%;
+        height: 400px;
+    }
+}
 
 /* Footer */
 .custom-footer {
