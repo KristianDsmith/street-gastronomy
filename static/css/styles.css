@@ -1231,7 +1231,7 @@ i {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
 
     body, html, .container, .row {
         width: 100%;
@@ -1244,7 +1244,7 @@ i {
 }
 
     .navbar {
-    padding: 0 30px;
+    padding: 0 40px;
     }
 
     .custom-navbar .navbar-brand {
