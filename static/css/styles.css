@@ -1087,9 +1087,378 @@ i {
     
     top: 40px;  /* Increased padding at the top */
     left: 100px;  /* 200px padding from the left */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+    padding: 0 50px;
+    }
+
+    .custom-navbar .navbar-brand {
+    font-size: 20px;
+    }
+
+    .custom-navbar .navbar-nav .nav-link,
+    .custom-navbar .navbar-nav .dropdown-toggle {
+    font-size: 16px;
+    }
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    border-radius: 3px;
+    width: 25px;  /* Adjust to your desired width */
+    height: 25px; /* Adjust to your desired height */
+}
+
+    .hero-image {
+        height: 200px;
+    }
+
+    .hero-logo {
+        top: 10%;
+        right: 90%;
+        width: 25px;
+    }
+
+    .hero-image h1 {
+        font-size: 22px;
+
+    }
+
+    .hero-image p {
+        font-size: 18px;
+    }
+
+    .welcome-image {
+        width: 400px;
+        height: 575px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+
+    .welcome-text-container {
+        width: 400px;
+        height: 575px;
+        margin-left: 40px;
+    }
+
+    .cookbook-section {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .cookbook-section .row.align-items-center {
+        flex: 1;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%; /* Ensuring the row spans the full width of the container */
+    }
+
+    .cookbook-text, .cookbook-item {
+        width: 100%;
+        padding-left: 20px; /* Matching the padding of the section for consistent spacing */
+        padding-right: 20px;
+    }
+
+    .cookbook-text .text-box {
+        width: 375px;
+        height: 375px;
+        position: relative;
+        box-sizing: border-box; /* Ensures padding and border are included in the width */
+        margin-left: 30px;
+    }
+
+    .cookbook-image {
+        width: 375px;/* Deducting the left and right margins */
+        height: auto;
+        min-height: 400px;
+        margin-left: 30px;
+        
+        margin-bottom: 20px;
+    }
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    #book-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Aligns children to the center */
+    }
+
+    #book-section h2 {
+        font-size: 22px;
+    }
+
+    #book-section .book-display {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .book-cover, #book-section .book-info {
+        width: 400px; /* Set a consistent width for both the image container and the info box */
+        
+    }
+
+    .book-cover img {
+    width: 100%;  /* Let the width adjust automatically based on the height */
+    height: 600px; /* Ensuring it takes the full height of its container */
+    }
+
+    #book-section .book-info {
+        height: auto;
+    }
+
+    .mt-3 {
+        font-size: 14px;
+    }
+
+    .hero-image-section {
+        height: 200px;
+    }
+
+    .hero-image-section img {
+        width: 100%;
+        height: 250px;
+    }
+
+   
+    .hero-text {
+    left: 50px;  /* 200px padding from the left */
+    }
+}
+
+@media (max-width: 320px) {
+
+    body, html, .container, .row {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+    box-sizing: border-box;
+}
+
+    .navbar {
+    padding: 0 30px;
+    }
+
+    .custom-navbar .navbar-brand {
+    font-size: 18px;
+    }
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    border-radius: 3px;
+    width: 20px;  /* Adjust to your desired width */
+    height: 20px; /* Adjust to your desired height */
+}
+
+.hero-image {
+        height: 250px;
+    }
+
+    .hero-logo {
+        top: 10%;
+        right: 90%;
+        width: 25px;
+    }
+
+    .hero-image h1 {
+        font-size: 18px;
+
+    }
+
+    .hero-image p {
+        font-size: 16px;
+    }
+
+    .welcome-image {
+        width: 400px;
+        height: 575px;
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .welcome-text-container {
+        width: 400px;
+        height: 825px;
+        margin-left: 0;
+    }
+
+    .welcome-section h2 {
+        font-size: 18px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+    }
+
+    .cookbook-section {
+        width: 100%;
+    }
+
+    .cookbook-section .row.align-items-center {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cookbook-text, .cookbook-item {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cookbook-text .text-box {
+        width: 100%;
+        height: 550px;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .cookbook-image {   
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 30px;
+    }
+
+    .cookbook-text h2 {
+        font-size: 18px;
+    }
+    
+    .cookbook-text p {
+        font-size: 16px;
+    }
+
+    .hero-image-section-jerk {
+        width: 100vw;
+        height: 190px;
+    }
+
+    .row {
+        display: block;
+    }
+    
+    .single-recipe {
+        width: 100%; 
+        margin-right: 0; /* Removes the spacing between two items in the same row */
+    }
+
+    
+    #recipe .title-text h2 {
+    display: inline-block;
+    /* Allows the pseudo-element to fit the content width */
+    position: relative;
+    /* Needed for absolute positioning of the pseudo-element */
+    margin-bottom: 20px;
     
 }
+
+*, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    #book-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Aligns children to the center */
+    }
+
+    #book-section h2 {
+        font-size: 18px;
+    }
+
+    #book-section .book-display {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .book-cover, #book-section .book-info {
+        width: 300px; /* Set a consistent width for both the image container and the info box */
+        
+    }
+
+    .book-cover img {
+    width: 100%;  /* Let the width adjust automatically based on the height */
+    height: 600px; /* Ensuring it takes the full height of its container */
+    }
+
+    #book-section .book-info {
+        height: auto;
+    }
+
+    .mt-3 {
+        font-size: 14px;
+    }
+
+    .hero-image-section {
+        height: 150px;
+    }
+
+    .hero-image-section img {
+        width: 100%;
+        height: 200px;
+    }
+
+   
+    .hero-text {
+    left: 30px;  /* 200px padding from the left */
+    }
+
+    .custom-footer {
+    background-color: rgb(216, 216, 216);
+    padding: 30px 0;
+    color: #555;
+    margin-top: 0;
+    padding-top: 0;
 }
+
+.custom-footer h5 {
+    font-size: 18px;
+    
+}
+
+.custom-footer p {
+    font-size: 14px;
+}
+
+
+
+
+
+.custom-footer ul li a,
+.custom-footer p a,
+.custom-footer .col-12 a {
+    font-size: 14px;
+}
+
+/* Increase the social icon size */
+.list-inline-item i {
+    font-size: 18px;
+}
+
+
+
+
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 

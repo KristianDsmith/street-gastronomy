@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    <li><a href="{% url 'index_en' %}">Home</a></li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}#about-section">About</a>
@@ -41,10 +41,10 @@
                         Language
                     </a>
                     <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <a class="dropdown-item" href="{% url 'english' %}">English</a>
-                        <a class="dropdown-item" href="{% url 'swedish' %}">Swedish</a>
-                        <a class="dropdown-item" href="{% url 'german' %}">German</a>
-                    </div>
+    <a class="dropdown-item" href="{% url 'index_en' %}">English</a>
+    <a class="dropdown-item" href="{% url 'index_se' %}">Swedish</a>
+    <a class="dropdown-item" href="{% url 'index_de' %}">German</a>
+</div>
                 </li>
             </ul>
         </div>
