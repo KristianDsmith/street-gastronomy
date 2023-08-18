@@ -58,47 +58,38 @@ section {
 
 
 /* Navigation */
-.custom-navbar {
+.navbar {
     background-color: rgb(216, 216, 216);
+    padding: 0 100px;
+    /* Simplified padding */
 }
 
 .custom-navbar .navbar-brand {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
-    margin-left: 50px;
-    height: 50px;
 }
 
 .custom-navbar .navbar-nav {
-    padding-left: 800px;
-    height: 50px;
+    margin-left: auto;
+    /* Use margin instead of padding to push content to the right */
 }
 
 .custom-navbar .navbar-nav .nav-link,
 .custom-navbar .navbar-nav .dropdown-toggle {
-    color: #555;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
     margin-right: 50px;
-    position: relative;
-    
 }
 
 .custom-navbar .navbar-nav .nav-link:hover,
 .custom-navbar .navbar-nav .dropdown-toggle:hover {
     color: #59dd2d;
-    /* This will change the text color on hover */
 }
 
 .custom-navbar .navbar-nav .nav-link:last-child {
     margin-right: 0;
-}
-
-.navbar-collapse {
-    height: auto;
-    min-height: 300px;
-    /* adjust as needed */
 }
 
 .navbar-toggler-icon {
@@ -106,21 +97,7 @@ section {
     border-radius: 3px;
 }
 
-@media (max-width: 1200px){
-    
-    .custom-navbar .navbar-nav {
-       
-        padding-left: 550px;
-    }
-}
 
-@media (max-width: 1024px) {
-
-    .custom-navbar .navbar-nav {
-
-        padding-left: 375px;
-    }
-}
 
 
 
@@ -361,7 +338,7 @@ section {
 }
 
 .cookbook-text p {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
 }
 
@@ -791,131 +768,6 @@ hr {
     display: inline-block;  /* Necessary to prevent the underline from spanning the full width */
 }
 
-@media (max-width: 768px) {
-    .hero-image {
-        height: 400px;
-    }
-
-    .hero-logo {
-        top: 10%;
-        right: 90%;
-        width: 45px;
-    }
-
-    .hero-image h1 {
-        font-size: 34px;
-
-    }
-
-    .hero-image p {
-        font-size: 26px;
-    }
-
-    .welcome-section {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .welcome-image {
-        height: 500px;
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-    }
-
-    .welcome-text-container {
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        background-color: white;
-        box-sizing: border-box;
-    }
-
-    .welcome-section h2 {
-        font-size: 24px;
-    }
-
-    .welcome-section p {
-        font-size: 14px;
-    }
-
-    .cookbook-section h2 {
-        font-size: 20px;
-    }
-
-    .cookbook-text,
-    .cookbook-item {
-        width: 50%;
-        height: 300px;
-    }
-
-    .cookbook-text .text-box {
-        width: 100%;
-        height: 375px;
-    }
-
-    .cookbook-image {
-        width: 90%;
-        height: auto;
-        min-height: 375px;
-        object-fit: cover;
-    }
-
-    .cookbook-text,
-    .cookbook-item-se {
-        width: 50%;
-        height: 325px;
-    }
-
-    .cookbook-image-se {
-        width: 90%;
-        height: auto;
-        min-height: 375px;
-        object-fit: cover;
-    }
-
-    .cookbook-text h3 {
-        font-size: 20px;
-    }
-
-    .cookbook-text p {
-        font-size: 12px;
-    }
-
-    #book-section h2 {
-        font-size: 20px;
-    }
-
-    #book-section .book-cover img {
-        max-width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    #book-section .book-info {
-        width: 100%;
-        height: 400px;
-        padding: 20px;
-
-    }
-
-    .mt-3 {
-        font-size: 12px;
-    }
-
-    .hero-image-section-jerk {
-        width: 100vw;
-        height: 300px;
-    }
-
-    .hero-image-section img {
-        width: 100%;
-        height: 400px;
-    }
-}
 
 /* Footer */
 .custom-footer {
@@ -1038,7 +890,206 @@ i {
     display: block;
 }
 
+@media (max-width: 1200px) {
+    .hero-image {
+        height: 400px;
+    }
 
+    .hero-image-section-jerk {
+        height: 400px;
+    }
+
+    .hero-image-section {
+        height: 400px;
+    }
+
+
+    .blog-h2 {
+        font-size: 24px;
+    }
+
+    
+}
+
+@media (max-width: 1025px) {
+    .hero-logo {
+        top: 10%;
+        right: 90%;
+        width: 45px;
+    }
+
+    .hero-image h1 {
+        font-size: 38px;
+    
+    }
+
+    .hero-image p {
+        font-size: 28px;
+    }
+
+    .welcome-text-container {
+        margin-left: 40px;
+    }
+    
+    .img-container {
+        margin-right: 30px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+    
+    .welcome-section p {
+        font-size: 16px;
+    }
+
+    .cookbook-section h2 {
+            font-size: 24px;
+    }
+    
+    .cookbook-image {
+        width: auto;
+        height: 448px;
+        margin-left: 100px;
+    }
+    
+    .cookbook-text .text-box {
+        width: 100%;
+        height: 448px;
+        
+    }
+
+    .cookbook-text h3 {
+        font-size: 24px;
+    }
+    
+    .cookbook-text p {
+        font-size: 16px;
+    }
+
+    #book-section .book-cover img {
+        max-width: 100%;
+        height: 550px; /* Fixed height */
+    }
+
+    #book-section .book-info {
+        height: 550px; /* Same height as the image */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 400px;
+    }
+
+    .hero-image h1 {
+        font-size: 34px;
+
+    }
+
+    .hero-image p {
+        font-size: 26px;
+    }
+
+    .welcome-text-container {
+        margin-left: 35px;
+    }
+    
+    .img-container {
+        margin-right: 0;
+    }
+
+    .welcome-image {
+        width: auto;
+        height: 575px;
+        margin-left: 0;
+    }
+
+    .welcome-text-container {
+        width: 400px;
+        height: 575px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+
+    .welcome-section p {
+        font-size: 14px;
+    }
+
+    .cookbook-section h2 {
+        font-size: 22px;
+    }
+
+    .cookbook-text,
+    .cookbook-item {
+        width: 50%;
+        height: 375px;
+    }
+
+    .cookbook-text .text-box {
+        width: 375px;
+        height: 375px;
+    }
+
+    .cookbook-image {
+        height: auto;
+        min-height: 375px;
+        margin-left: 40px;
+    }
+
+    .cookbook-text h3 {
+        font-size: 24px;
+    }
+
+    .cookbook-text p {
+        font-size: 14px;
+    }
+    
+    #book-section .book-display {
+    gap: 1rem;
+    align-items: start; /* Aligns children at the top */
+   
+    }
+
+    #book-section h2 {
+        font-size: 20px;
+    }
+    
+    #book-section .book-cover img {
+        max-width: 100%;
+        height: 375px; /* Fixed height */
+        margin-right: -50px;
+    }
+
+    #book-section .book-info {
+        height: 375px; 
+        width: 500px;
+        
+    }
+    
+    .mt-3 {
+        font-size: 12px;
+    }
+
+    .hero-image-section-jerk {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .hero-image-section img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .hero-text {
+    
+    top: 40px;  /* Increased padding at the top */
+    left: 100px;  /* 200px padding from the left */
+    
+}
+}
 
 
 
