@@ -709,7 +709,7 @@ hr {
 
 .social-links li {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Change social icon color on hover */
@@ -1593,7 +1593,7 @@ i {
     
         .custom-navbar .navbar-nav .nav-link,
         .custom-navbar .navbar-nav .dropdown-toggle {
-            font-size: 16px;
+            font-size: 14px;
         }
     
         .hero-image {
