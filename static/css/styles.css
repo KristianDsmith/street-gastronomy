@@ -107,8 +107,8 @@ section {
 
 /* Hero Section */
 
-.hero-image {
-    background-image: url('https://res.cloudinary.com/dqe39dixt/image/upload/v1692113299/background-banner_iqelfm.jpg');
+.hero-image-main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('https://res.cloudinary.com/dqe39dixt/image/upload/v1692113299/background-banner_iqelfm.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,6 +120,12 @@ section {
     color: #fff;
     text-align: center;
     position: relative; 
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -450,6 +456,11 @@ hr {
     font-size: 24px; /* This is just an example size. Adjust as needed. */
 }
 
+#book-section h3 {
+            font-size: 24px;
+            
+        }
+
 
 #book-section .container {
     text-align: left; /* Aligns the text to the left */
@@ -458,16 +469,16 @@ hr {
     align-items: flex-start; /* Aligns container's children to the start */
 }
 
-#book-section h2, #book-section p.lead {
+#book-section h2, #book-section h3, #book-section p.lead {
     align-self: flex-start; /* Aligns these elements to the start of their container */
 }
 
-#book-section h2 {
+#book-section h2, #book-section h3 {
     position: relative;
     display: inline-block; /* Makes the element only as wide as the text */
 }
 
-#book-section h2::after {
+#book-section h2::after, #book-section h3::after {
     content: "";
     position: absolute;
     bottom: -5px; /* Spacing between text and underline */
@@ -560,6 +571,7 @@ hr {
     margin-left: -50vw;
     margin-right: -50vw;
     margin-bottom: -20px;
+    
     
 }
 
@@ -757,6 +769,11 @@ i {
         /* Same height as the image */
     }
 
+    #book-section h3 {
+            font-size: 22px;
+            
+        }
+
     .mt-3 {
         font-size: 18px;
     }
@@ -826,7 +843,7 @@ i {
     }
 
     .cookbook-text h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .cookbook-text p {
@@ -835,14 +852,19 @@ i {
 
     #book-section .book-cover img {
         max-width: 100%;
-        height: 475px;
+        height: 525px;
         /* Fixed height */
     }
 
     #book-section .book-info {
-        height: 475px;
+        height: 525px;
         /* Same height as the image */
     }
+
+    #book-section h3 {
+            font-size: 20px;
+            
+        }
 
     .hero-image-section-jerk {
         height: 400px;
@@ -923,15 +945,26 @@ i {
         font-size: 16px;
     }
 
+    #book-section {
+        min-height: 700px;
+        
+
+    }
+
     #book-section .book-cover img {
         max-width: 100%;
-        height: 400px;
+        height: 550px;
     }
 
     #book-section .book-info {
-        height: 400px;
+        height: 550px;
         margin-right: 20px;
     }
+
+    #book-section h3 {
+            font-size: 24px;
+            
+        }
 
     p.mt-3 {
         font-size: 14px;
@@ -1111,9 +1144,14 @@ i {
     }
 
     #book-section h2 {
-        font-size: 22px;
-        margin-right: 15px;
-    }
+            font-size: 22px;
+            margin-left: 15px;
+        }
+
+         #book-section h3 {
+            font-size: 22px;
+            
+        }
 
     .book-cover {
         width: auto;
@@ -1335,9 +1373,14 @@ i {
     }
 
     #book-section h2 {
-        font-size: 20px;
-        margin-right: 15px;
-    }
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+         #book-section h3 {
+            font-size: 20px;
+            
+        }
 
     .book-cover {
         width: auto;
@@ -1421,7 +1464,7 @@ i {
         
 }
 
-@media (min-width: 370px) and (max-width: 415px) {
+@media (min-width: 355px) and (max-width: 415px) {
     .navbar {
             padding: 0 20px;
         }
@@ -1442,17 +1485,17 @@ i {
             font-size: 14px;
         }
     
-        .hero-image {
-            height: 250px;
+        .hero-image-main {
+            height: 200px;
         }
     
-        .hero-image h1 {
-            font-size: 20px;
+        .hero-image-main h1 {
+            font-size: 18px;
     
         }
     
-        .hero-image p {
-            font-size: 16px;
+        .hero-image-main p {
+            font-size: 14px;
         }
     
         .row.align-items-center {
@@ -1483,7 +1526,7 @@ i {
         }
     
         .cookbook-section {
-            min-height: 1000px;
+            min-height: 1100px;
         }
     
         .cookbook-section .row.align-items-center {
@@ -1503,7 +1546,7 @@ i {
         .cookbook-text,
         .cookbook-item {
             width: 100%;
-            height: 450px;
+            height: 575px;
             margin-left: 0;
             margin-right: 0;
             padding-left: 0;
@@ -1512,7 +1555,7 @@ i {
     
         .cookbook-text .text-box {
             width: 100%;
-            height: 450px;
+            height: 575px;
             box-sizing: border-box;
         }
     
@@ -1527,7 +1570,7 @@ i {
     
         .hero-image-section-jerk {
             width: 100vw;
-            height: 250px;
+            height: 200px;
         }
     
         .row {
@@ -1547,7 +1590,7 @@ i {
         }
     
         #book-section {
-            min-height: 1100px;
+            min-height: 1000px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1563,19 +1606,24 @@ i {
     
         #book-section h2 {
             font-size: 20px;
-            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+         #book-section h3 {
+            font-size: 20px;
+            
         }
     
        .book-cover {
-            width: auto;
+            width: 400px;
             height: 100%;
        }
     
         .book-cover img {
             width: auto;
             height: 100%;
-            margin: 0 0 20px 20px;
-            transform: scale(0.8);
+            margin: 0 0 20px 40px;
+            transform: scale(0.7);
             
         }
 
@@ -1595,12 +1643,12 @@ i {
         }
     
         .hero-image-section {
-            height: 250px;
+            height: 200px;
         }
     
         .hero-image-section img {
             width: 100%;
-            height: 250px;
+            height: 200px;
         }
     
     
