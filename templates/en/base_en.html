@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg custom-navbar">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'index_en' %}">
             <img src="{% static 'images/sg-white-crop.png' %}" alt="Street Gastronomy Logo" height="30"
                 class="d-inline-block align-top">
         </a>
@@ -50,7 +50,7 @@
                     <div class="dropdown-menu" aria-labelledby="languageDropdown">
                         <a class="dropdown-item" href="{% url 'index_en' %}">English</a>
                         <a class="dropdown-item" href="{% url 'index_se' %}">Swedish</a>
-                        <a class="dropdown-item" href="{% url 'index_de' %}">German</a>
+                        
                     </div>
                 </li>
             </ul>
@@ -108,10 +108,10 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center copy">
                     Copyright © 2023 by Street Gastronomy. All rights reserved.
                 </div>
-                <div class="col-12 text-center mt-2">
+                <div class="col-12 text-center mt-2 copy">
                     Website powered by <a href="https://kode-s.nu/" target="_blank">Kode-S</a>
                 </div>
             </div>

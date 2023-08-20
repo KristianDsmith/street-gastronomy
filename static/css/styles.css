@@ -227,17 +227,6 @@ section {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.german-text-container {
-    max-width: 70%; /* Adjust to your preference */
-    height: 650px;
-}
-
-.german-welcome-image {
-    height: 100%;  /* make the image height same as its container */
-    max-height: 650px;  /* Restrict the maximum height */
-    width: auto;  /* Keep the width automatically adjusted */
-    object-fit: cover;  /* Preserve the image's aspect ratio */
-}
 
 /* Cookbook Section */
 
@@ -280,7 +269,7 @@ section {
     flex: 1;
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
+    height: 465px;
     /* Maintaining the previous height */
     position: relative;
 }
@@ -290,7 +279,7 @@ section {
     flex: 1;
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
+    height: 465px;
     /* Maintaining the previous height */
     position: relative;
 }
@@ -335,34 +324,6 @@ section {
 .cookbook-text p {
     font-size: 18px;
     color: #666;
-}
-
-.cookbook-item-se .cookbook-image {
-    height: 488px;
-    width: auto; 
-    object-fit: cover;
-}
-
-.cookbook-item-se {
-    margin-left: 100px; 
-}
-
-.cookbook-text .swedish  {
-    height: 488px; /* Increased by 20px for the Swedish version */
-}
-
-.german-cookbook-textbox {
-    height: auto;  /* Adjust the height based on content */
-    min-height: 488px;  /* Minimum height */
-    padding: 20px;  /* Inner spacing for the content */
-    box-sizing: border-box;  /* To include padding in total height */
-}
-
-.german-cookbook-image {
-    height: auto;  /* Adjust the height based on the image's aspect ratio */
-    min-height: 488px;  /* Minimum height */
-    object-fit: cover;  /* To ensure the image covers the entire container */
-    box-sizing: border-box;  /* To ensure padding and border are included in total height */
 }
 
 
@@ -562,18 +523,6 @@ hr {
     border-color: #45c91b;
 }
 
-.german-book-info {
-    height: auto; 
-}
-
-
-.german-book-image {
-    height: 100%;  /* Set a height for the image to match the text box. */
-    object-fit: cover;  /* Ensure the image covers the entire container while maintaining its aspect ratio. */
-    box-sizing: border-box;  /* To ensure padding and border are included in total height. */
-    margin-right: 20px;  /* Provide some space between the image and the text box if they're side by side. Adjust if necessary. */
-}
-
 
 
 /* Hero section */
@@ -694,6 +643,10 @@ hr {
     display: inline-block;
 }
 
+.copy {
+            font-size: 14px;
+        }
+
 .custom-footer ul li a:hover,
 .custom-footer p a:hover,
 .custom-footer .col-12 a:hover {
@@ -793,9 +746,34 @@ i {
         height: 400px;
     }
 
+    #book-section .book-cover img {
+        max-width: 100%;
+        height: 550px;
+        /* Fixed height */
+    }
+
+    #book-section .book-info {
+        height: 550px;
+        /* Same height as the image */
+    }
+
+    .mt-3 {
+        font-size: 18px;
+    }
+
+    .hero-text {
+        top: 40px;
+        left: 100px;
+    }
+
     .blog-h2 {
         font-size: 24px;
     }
+
+
+    .copy {
+            font-size: 14px;
+        }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -838,12 +816,13 @@ i {
     .cookbook-image {
         width: auto;
         height: 448px;
-        margin-left: 100px;
+        margin-left: 80px;
     }
 
     .cookbook-text .text-box {
         width: 100%;
         height: 448px;
+        
     }
 
     .cookbook-text h3 {
@@ -856,12 +835,12 @@ i {
 
     #book-section .book-cover img {
         max-width: 100%;
-        height: 550px;
+        height: 475px;
         /* Fixed height */
     }
 
     #book-section .book-info {
-        height: 550px;
+        height: 475px;
         /* Same height as the image */
     }
 
@@ -881,6 +860,10 @@ i {
     .blog-h2 {
         font-size: 24px;
     }
+
+    .copy {
+            font-size: 14px;
+        }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -922,14 +905,14 @@ i {
 
     .cookbook-image {
         width: auto;
-        height: 548px;
-        margin-right: 50px;
+        height: 450px;
+        margin-right: 40px;
     }
 
     .cookbook-text .text-box {
         width: 100%;
-        height: 548px;
-        margin-left: 80px;
+        height: 450px;
+        margin-left: 45px;
     }
 
     .cookbook-text h3 {
@@ -942,11 +925,11 @@ i {
 
     #book-section .book-cover img {
         max-width: 100%;
-        height: 450px;
+        height: 400px;
     }
 
     #book-section .book-info {
-        height: 450px;
+        height: 400px;
         margin-right: 20px;
     }
 
@@ -970,161 +953,13 @@ i {
     .blog-h2 {
         font-size: 20px;
     }
+
+    .copy {
+            font-size: 14px;
+        }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-    .navbar {
-        padding: 0 50px;
-    }
 
-    .custom-navbar .navbar-brand {
-        font-size: 24px;
-        height: 90px;
-    }
-
-    .navbar-brand img {
-        width: 35px;
-        height: auto;
-        padding-top: 10px;
-    }
-
-    .hero-image {
-        height: 350px;
-    }
-
-    .hero-image h1 {
-        font-size: 34px;
-    }
-
-    .hero-image p {
-        font-size: 26px;
-    }
-
-    .welcome-text-container {
-        margin-left: 50px;
-    }
-
-    .img-container {
-        margin-right: 0;
-    }
-
-    .welcome-image {
-        width: auto;
-        height: 575px;
-        margin-left: 0;
-    }
-
-    .welcome-text-container {
-        width: 400px;
-        height: 575px;
-    }
-
-    .welcome-section h2 {
-        font-size: 24px;
-    }
-
-    .welcome-section p {
-        font-size: 14px;
-    }
-
-    .cookbook-section h2 {
-        font-size: 22px;
-    }
-
-    .cookbook-text,
-    .cookbook-item {
-        width: 50%;
-        height: 375px;
-    }
-
-    .cookbook-text .text-box {
-        width: 375px;
-        height: 375px;
-    }
-
-    .cookbook-image {
-        height: auto;
-        min-height: 375px;
-        margin-left: 40px;
-    }
-
-    .cookbook-text h3 {
-        font-size: 24px;
-    }
-
-    .cookbook-text p {
-        font-size: 14px;
-    }
-
-    #book-section .book-display {
-        gap: 1rem;
-        align-items: start;
-        /* Aligns children at the top */
-    }
-
-    #book-section h2 {
-        font-size: 20px;
-    }
-
-    #book-section .book-cover img {
-        max-width: 100%;
-        height: 375px;
-        /* Fixed height */
-        margin-right: -30px;
-    }
-
-    #book-section .book-info {
-        height: 375px;
-        width: 500px;
-    }
-
-    p.mt-3 {
-        font-size: 12px;
-    }
-
-    .hero-image-section-jerk {
-        width: 100vw;
-        height: 300px;
-    }
-
-    .hero-image-section {
-        height: 300px;
-    }
-
-    .hero-image-section img {
-        width: 100%;
-        height: 300px;
-    }
-
-    .hero-text {
-        top: 40px;
-        /* Increased padding at the top */
-        left: 50px;
-        /* 200px padding from the left */
-    }
-
-    .blog-h2 {
-        font-size: 20px;
-    }
-
-    .custom-footer h5 {
-        font-size: 20px;
-    }
-
-    .custom-footer p {
-        font-size: 14px;
-    }
-
-    .custom-footer ul li a,
-    .custom-footer p a,
-    .custom-footer .col-12 a {
-        font-size: 14px;
-    }
-
-    .list-inline-item i {
-        font-size: 20px;
-    }
-}
 
 @media (min-width: 577px) and (max-width: 768px) {
     .navbar {
@@ -1202,6 +1037,7 @@ i {
 
     .cookbook-section h2 {
         font-size: 22px;
+        margin-bottom: -20px;
     }
 
     .cookbook-text p {
@@ -1222,12 +1058,14 @@ i {
         width: 100%;
         height: 300px;
         box-sizing: border-box;
+        position: static;
     }
 
         .cookbook-image {
             width: auto;
             height: 100%;
-            margin: 0 15px 20px 15px;
+            margin: 0 15px 40px 15px;
+            
             transform: scale(0.8);
             /* This scales the content down to 90% of its original size */
         }
@@ -1341,6 +1179,10 @@ i {
         font-size: 14px;
     }
 
+    .copy {
+            font-size: 14px;
+        }
+
     .list-inline-item i {
         font-size: 20px;
     }
@@ -1409,7 +1251,7 @@ i {
     }
 
     .cookbook-section {
-        min-height: 1000px;
+        min-height: 1150px;
     }
 
     .cookbook-section .row.align-items-center {
@@ -1419,7 +1261,7 @@ i {
     }
 
     .cookbook-section h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .cookbook-text p {
@@ -1446,7 +1288,7 @@ i {
         width: auto;
         height: 100%;
         margin: 0 15px 20px 15px;
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
 
     .hero-image-section-jerk {
@@ -1558,6 +1400,10 @@ i {
     .custom-footer .col-12 a {
         font-size: 14px;
     }
+
+    .copy {
+            font-size: 14px;
+        }
 
     .list-inline-item i {
         font-size: 20px;
@@ -1674,7 +1520,10 @@ i {
             width: 350;
             height: 400px;
             margin: 0 15px 20px 15px;
+            transform: scale(0.8);
         }
+
+                
     
         .hero-image-section-jerk {
             width: 100vw;
@@ -1718,27 +1567,27 @@ i {
         }
     
        .book-cover {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           width: 370px;
-           height: auto;
+            width: auto;
+            height: 100%;
        }
     
         .book-cover img {
-            max-width: 100%;
-            max-height: 60vh;
-            object-fit: cover;
-            margin: 0 20px 10px 70px;
+            width: auto;
+            height: 100%;
+            margin: 0 0 20px 20px;
+            transform: scale(0.8);
             
+        }
+
+        #book-section .container {
+            padding-left: 0;
+            padding-right: 0;
         }
        
     
         #book-section .book-info {
             width: 100%;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 20px;
+            height: auto;
         }
     
         p.mt-3 {
@@ -1776,6 +1625,10 @@ i {
         .custom-footer ul li a,
         .custom-footer p a,
         .custom-footer .col-12 a {
+            font-size: 14px;
+        }
+
+        .copy {
             font-size: 14px;
         }
     

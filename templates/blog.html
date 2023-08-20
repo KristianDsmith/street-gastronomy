@@ -13,7 +13,8 @@
     <div class="post-body">{{ post.body|safe }}</div>
 
     {% if post.link %}
-    <a class="read-more-btn" href="{{ post.link }}">Link</a>
+    <a class="read-more-btn" href="{{ post.link }}" target="_blank">Link</a>
+
     {% endif %}
 </div>
 {% endfor %}
