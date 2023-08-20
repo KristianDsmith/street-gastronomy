@@ -32,7 +32,6 @@ section {
     padding: 20px 15px;
 }
 
-/* ... (your existing styles) ... */
 
 /* Sections with Full Width Background */
 .welcome-section, 
@@ -47,11 +46,11 @@ section {
     margin-right: -50vw;
 }
 
-/* If there's any content inside these sections, ensure they have their own container to control the width and padding of the actual content. Example: */
+
 .inner-content {
-    max-width: 1200px; /* Or whatever maximum width you prefer */
-    margin: 0 auto; /* Centers the content */
-    padding: 0 20px; /* Some padding on the sides to ensure content doesn't touch the screen edge on small screens */
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
 }
 
 
@@ -61,7 +60,7 @@ section {
 .navbar {
     background-color: rgb(203, 201, 201);
     padding: 0 100px;
-    /* Simplified padding */
+    
 }
 
 .custom-navbar .navbar-brand {
@@ -80,7 +79,7 @@ section {
 
 .custom-navbar .navbar-nav {
     margin-left: auto;
-    /* Use margin instead of padding to push content to the right */
+    
 }
 
 .custom-navbar .navbar-nav .nav-link,
@@ -130,7 +129,7 @@ section {
 
 
 
-.hero-image h1 {
+.hero-image-main h1 {
     color: #fff;
     font-size: 44px;
     font-weight: bold;
@@ -138,7 +137,7 @@ section {
     
 }
 
-.hero-image p {
+.hero-image-main p {
     color: #fff;
     font-size: 36px;
 }
@@ -156,23 +155,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: start;
-    /* Align children to the top */
     flex-direction: row;
     
 }
 
 .welcome-text-container {
     flex: 1;
-    /* Make sure both text and image take equal space */
     padding-top: 40px;
     height: 600px;
-    /* Example height. Adjust as necessary. */
     box-sizing: border-box;
-    /* Ensure padding doesn't increase box size */
     text-align: left;
     max-width: 50%;
     background-color: white;
-    /* Make the text box background white */
 }
 
 .welcome-section h2 {
@@ -186,19 +180,12 @@ section {
 
 .welcome-section h2::after {
     content: "";
-    /* Required for the pseudo-element to be generated */
     position: absolute;
-    /* Absolute positioning relative to the h2 */
     left: 0;
-    /* Start from the leftmost point of the h2 */
     right: 0;
-    /* End at the rightmost point of the h2 */
     bottom: -5px;
-    /* Position just below the text */
     height: 2px;
-    /* Thickness of the underline */
     background-color: #59dd2d;
-    /* Color of the underline */
 }
 
 .welcome-section p {
@@ -208,16 +195,11 @@ section {
 
 .welcome-image {
     flex: 1;
-    /* Make sure both text and image take equal space */
     width: auto;
     height: 600px;
-    /* Ensure it's the same height as the text box */
     object-fit: cover;
-    /* Preserve aspect ratio of the image while filling the container */
     margin-right: 20px;
 }
-
-/* Box shadows and hover effects */
 
 .welcome-text-container,
 .welcome-image {
@@ -261,13 +243,11 @@ section {
     width: 100%;
     height: 2px;
     background-color: #59dd2d;
-    /* Change to desired shade of green */
 }
 
 .row.align-items-center {
     display: flex;
     align-items: start;
-    /* Aligns children to the top */
 }
 
 .cookbook-text,
@@ -276,7 +256,6 @@ section {
     box-sizing: border-box;
     width: 50%;
     height: 465px;
-    /* Maintaining the previous height */
     position: relative;
 }
 
@@ -286,14 +265,12 @@ section {
     box-sizing: border-box;
     width: 50%;
     height: 465px;
-    /* Maintaining the previous height */
     position: relative;
 }
 
 .cookbook-item {
     display: flex;
     align-items: start;
-    /* Aligns image to the top */
     justify-content: center;
 }
 
@@ -314,10 +291,8 @@ section {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 468px;
-    /* Adjusted height */
     position: absolute;
     top: 0;
-    /* Aligns the text box to the top */
 }
 
 .cookbook-text h3 {
@@ -335,11 +310,10 @@ section {
 
 /* Recipe Section */
 
-/* Reset margins and paddings for troubleshooting */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* this ensures border and padding are included in element's total width/height */
+    box-sizing: border-box; 
 }
 
 
@@ -347,7 +321,7 @@ section {
     width: 100vw;
     padding: 20px 0;
     background-color: #E8F5E9;
-    position: relative; /* Added for potential positioning fixes */
+    position: relative; 
     left: 50%;
     right: 50%;
     margin-left: -50vw;
@@ -356,9 +330,7 @@ section {
 
 #recipe .title-text h2 {
     display: inline-block;
-    /* Allows the pseudo-element to fit the content width */
     position: relative;
-    /* Needed for absolute positioning of the pseudo-element */
     margin-bottom: 20px;
 }
 
@@ -366,22 +338,17 @@ section {
     content: "";
     display: block;
     width: 100%;
-    /* Full width of the content */
     height: 2px;
     background-color: #59dd2d;
     margin-top: 10px;
-    /* Spacing between the text and the underline */
     position: absolute;
-    /* Position it relative to the h2 */
     bottom: -10px;
-    /* Position it below the h2 */
     left: 0;
-    /* Start from the left edge */
 }
 
 .container {
     max-width: 1200px;
-    width: 100%; /* ensures the container takes the full width of its parent up to its max-width */
+    width: 100%; 
     margin: 0 auto;
     padding: 20px 15px;
 }
@@ -394,17 +361,17 @@ section {
     color: #fff;
     position: relative;
     transition: all 0.3s ease-in-out;
-    flex-basis: calc(50% - 10px); /* This ensures two items per row with a bit of space */
+    flex-basis: calc(50% - 10px); 
 }
 
 .single-recipe:nth-child(odd) {
-    margin-right: 20px; /* This adds space between two items in the same row */
+    margin-right: 20px; 
 }
 
 .single-recipe img {
     width: 100%;
-    height: 100%; /* Set a specific height to make the images bigger */
-    object-fit: cover; /* This ensures the image covers the entire space without distortion */
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
@@ -416,13 +383,12 @@ section {
 .recipe-desc {
     width: 80%;
     position: absolute;
-    bottom: 10%; /* Adjusted from 0% to 10% to give more space at the bottom */
+    bottom: 10%; 
     left: 50%;
     opacity: 0;
     transform: translateX(-50%);
     transition: all 0.3s ease-in-out;
     padding: 10px;
-    /*background-color: rgba(0,0,0,0.7); /* Added a slight background for better readability */
     border-radius: 7px;
 }
 
@@ -453,54 +419,53 @@ hr {
 }
 
 #book-section h2 {
-    font-size: 24px; /* This is just an example size. Adjust as needed. */
+    font-size: 24px; 
 }
 
 #book-section h3 {
-            font-size: 24px;
-            
-        }
+    font-size: 24px;
+}
 
 
 #book-section .container {
-    text-align: left; /* Aligns the text to the left */
+    text-align: left; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns container's children to the start */
+    align-items: flex-start; 
 }
 
 #book-section h2, #book-section h3, #book-section p.lead {
-    align-self: flex-start; /* Aligns these elements to the start of their container */
+    align-self: flex-start; 
 }
 
 #book-section h2, #book-section h3 {
     position: relative;
-    display: inline-block; /* Makes the element only as wide as the text */
+    display: inline-block; 
 }
 
 #book-section h2::after, #book-section h3::after {
     content: "";
     position: absolute;
-    bottom: -5px; /* Spacing between text and underline */
+    bottom: -5px; 
     left: 0;
-    height: 2px; /* Thickness of the underline */
-    width: 100%; /* Full width of the text */
-    background-color: #59dd2d; /* Green color */
+    height: 2px; 
+    width: 100%; 
+    background-color: #59dd2d; 
 }
 
 
 #book-section .book-display {
     display: flex;
-    flex-wrap: nowrap; /* Prevents items from wrapping, ensuring they stay in a single row */
+    flex-wrap: nowrap; 
     gap: 2rem;
-    align-items: start; /* Aligns children at the top */
-    width: 100%; /* Ensures the book display takes up the full width */
+    align-items: start; 
+    width: 100%; 
 }
 
 #book-section .book-cover img {
     max-width: 100%;
-    height: 500px; /* Fixed height */
-    object-fit: cover; /* Ensures image fits the given dimensions */
+    height: 500px; 
+    object-fit: cover; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -511,8 +476,8 @@ hr {
 
 #book-section .book-info {
     flex: 1;
-    width: 100%; /* Same width as the image */
-    height: 500px; /* Same height as the image */
+    width: 100%; 
+    height: 500px; 
     background: #ffffff; 
     padding: 20px; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -526,7 +491,7 @@ hr {
 #book-section .btn-primary {
     background-color: #59dd2d;
     border-color: #59dd2d;
-    align-self: flex-start; /* Aligns the button to the left within its container */
+    align-self: flex-start; 
 }
 
 #book-section .btn-primary:hover {
@@ -551,7 +516,7 @@ hr {
     animation-name: none;
 }
 
-/* Once the "animate" class is added, the animation will play */
+
 .animate img {
     animation-name: hero-zoom;
     animation-duration: 5s;
@@ -563,7 +528,7 @@ hr {
 .hero-image-section-jerk {
     width: 100vw;
     height:600px; 
-    overflow: hidden; /* Ensures no horizontal scroll bar if the image is bigger than the viewport width */
+    overflow: hidden; 
     box-sizing: border-box;
     position: relative;
     left: 50%;
@@ -578,7 +543,7 @@ hr {
 .hero-image-section-jerk img {
     width: 100%;
     height: auto;
-    display: block; /* Removes any default spacing around the image */
+    display: block; 
     
 }
 
@@ -603,17 +568,17 @@ hr {
 
 .hero-text {
     position: absolute;
-    top: 60px;  /* Increased padding at the top */
-    left: 200px;  /* 200px padding from the left */
+    top: 60px;  
+    left: 200px;  
     color: white;
     text-align: left;
     z-index: 1;
 }
 
 .hero-text h2 {
-    border-bottom: 2px solid #59dd2d;  /* Green underline */
-    padding-bottom: 5px;  /* Creates a little space between the text and the underline */
-    display: inline-block;  /* Necessary to prevent the underline from spanning the full width */
+    border-bottom: 2px solid #59dd2d;  
+    padding-bottom: 5px;  
+    display: inline-block;  
 }
 
 
@@ -656,14 +621,14 @@ hr {
 }
 
 .copy {
-            font-size: 14px;
-        }
+    font-size: 14px;
+}
 
 .custom-footer ul li a:hover,
 .custom-footer p a:hover,
 .custom-footer .col-12 a:hover {
     color: #59dd2d;
-    /* This will change the text color on hover */
+    
     text-decoration: none;
 }
 
@@ -677,16 +642,16 @@ hr {
     margin-bottom: 10px;
 }
 
-/* Change social icon color on hover */
+
 .list-inline-item a:hover i {
     color: #59dd2d;
 }
 
-/* Increase the social icon size */
+
 .list-inline-item i {
     font-size: 24px;
 }
-/* Font Awesome icons adjustment */
+
 i {
     margin-right: 5px;
 }
@@ -712,16 +677,16 @@ i {
 
 .post-title {
     margin: 0;
-    margin-bottom: 20px;  /* Space below the title */
+    margin-bottom: 20px; 
     color: #333;
-    text-decoration: underline #59dd2d; /* Green underline effect */
+    text-decoration: underline #59dd2d; 
 }
 
 .read-more-btn {
     display: inline-block;
-    margin-top: 20px; /* Space above the button */
+    margin-top: 20px; 
     padding: 5px 10px;
-    background-color: #59dd2d; /* Green button color */
+    background-color: #59dd2d; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -732,11 +697,8 @@ i {
     margin: 0 auto 20px auto;
     width: 500px;
     height: auto;
-    /* Set a fixed height */
     object-fit: cover;
-    /* Cover the entire element box without distorting the image */
     object-position: center;
-    /* Center the image within the box */
 }
 
 .post-body {
@@ -761,12 +723,10 @@ i {
     #book-section .book-cover img {
         max-width: 100%;
         height: 550px;
-        /* Fixed height */
     }
 
     #book-section .book-info {
         height: 550px;
-        /* Same height as the image */
     }
 
     #book-section h3 {
@@ -802,11 +762,11 @@ i {
         height: 400px;
     }
 
-    .hero-image h1 {
+    .hero-image-main h1 {
         font-size: 38px;
     }
 
-    .hero-image p {
+    .hero-image-main p {
         font-size: 28px;
     }
 
@@ -853,12 +813,10 @@ i {
     #book-section .book-cover img {
         max-width: 100%;
         height: 525px;
-        /* Fixed height */
     }
 
     #book-section .book-info {
         height: 525px;
-        /* Same height as the image */
     }
 
     #book-section h3 {
@@ -897,11 +855,11 @@ i {
         height: 400px;
     }
 
-    .hero-image h1 {
+    .hero-image-main h1 {
         font-size: 38px;
     }
 
-    .hero-image p {
+    .hero-image-main p {
         font-size: 28px;
     }
 
@@ -947,8 +905,6 @@ i {
 
     #book-section {
         min-height: 700px;
-        
-
     }
 
     #book-section .book-cover img {
@@ -1019,12 +975,12 @@ i {
         height: 300px;
     }
 
-    .hero-image h1 {
+    .hero-image-main h1 {
         font-size: 28px;
 
     }
 
-    .hero-image p {
+    .hero-image-main p {
         font-size: 20px;
     }
 
@@ -1094,14 +1050,12 @@ i {
         position: static;
     }
 
-        .cookbook-image {
-            width: auto;
-            height: 100%;
-            margin: 0 15px 40px 15px;
-            
-            transform: scale(0.8);
-            /* This scales the content down to 90% of its original size */
-        }
+.cookbook-image {
+    width: auto;
+    height: 100%;
+    margin: 0 15px 40px 15px;
+    transform: scale(0.8);
+    }
 
     .hero-image-section-jerk {
         width: 100vw;
@@ -1112,7 +1066,6 @@ i {
         width: 90%;
         position: absolute;
         bottom: 2%;
-        /* Adjusted from 0% to 10% to give more space at the bottom */
         padding: 10px;
         border-radius: 7px;
     }
@@ -1136,11 +1089,8 @@ i {
     #book-section .book-display {
         display: flex;
         flex-direction: column;
-        /* Image above text */
         align-items: center;
-        /* Center content */
         width: 100%;
-        /* Ensure it takes full width */
     }
 
     #book-section h2 {
@@ -1161,9 +1111,7 @@ i {
     .book-cover img {
         width: auto;
         height: 100%;
-        /* Ensures image takes full height of its container */
         margin: 0 15px 20px 15px;
-
     }
 
     #book-section .container {
@@ -1173,9 +1121,7 @@ i {
 
     #book-section .book-info {
         width: 100%;
-        /* Text box full width */
         height: auto;
-        /* Let the height adjust automatically based on content */
     }
 
     p.mt-3 {
@@ -1195,7 +1141,6 @@ i {
     .hero-text {
         top: 20px;
         left: 50px;
-        /* 200px padding from the left */
     }
 
     .blog-h2 {
@@ -1252,12 +1197,12 @@ i {
         height: 250px;
     }
 
-    .hero-image h1 {
+    .hero-image-main h1 {
         font-size: 24px;
 
     }
 
-    .hero-image p {
+    .hero-image-main p {
         font-size: 20px;
     }
 
@@ -1341,15 +1286,12 @@ i {
     .single-recipe {
         width: 100%;
         margin-right: 0;
-        /* Removes the spacing between two items in the same row */
     }
 
 
     #recipe .title-text h2 {
         display: inline-block;
-        /* Allows the pseudo-element to fit the content width */
         position: relative;
-        /* Needed for absolute positioning of the pseudo-element */
         margin-bottom: 20px;
 
     }
@@ -1365,11 +1307,8 @@ i {
     #book-section .book-display {
         display: flex;
         flex-direction: column;
-        /* Image above text */
         align-items: center;
-        /* Center content */
         width: 100%;
-        /* Ensure it takes full width */
     }
 
     #book-section h2 {
@@ -1401,9 +1340,7 @@ i {
 
     #book-section .book-info {
         width: 100%;
-        /* Text box full width */
         height: auto;
-        /* Let the height adjust automatically based on content */
     }
 
     p.mt-3 {
@@ -1423,7 +1360,6 @@ i {
     .hero-text {
         top: 20px;
         left: 30px;
-        /* 200px padding from the left */
     }
 
     .blog-h2 {
@@ -1655,7 +1591,6 @@ i {
         .hero-text {
             top: 20px;
             left: 30px;
-            /*200px padding from the left */
         }
     
         .blog-h2 {
