@@ -763,110 +763,6 @@ i {
         }
 }
 
-/* Portrait */
-@media (min-width: 820px) and (max-width: 1180px) {
-        
-    .welcome-text-container {
-        margin-right: 20px;
-    }
-        
-    .img-container {
-        margin-right: 10px;
-    }
-
-    .welcome-image {
-        height: 675px;
-    }
-            
-    .welcome-text-container {
-        height: 675px;
-        width: 400px;
-    }
-        
-    .welcome-section h2 {
-        font-size: 24px;
-    }
-        
-    .welcome-section p {
-        font-size: 18px;
-    }
-
-    .cookbook-section {
-        min-height: 0;
-    }
-
-    .cookbook-image {
-        width: auto;
-        height: 600px;
-        margin-right: 0;
-        
-    }
-    
-    .cookbook-text .text-box {
-        width: auto;
-        height: 465px;
-        
-    }
-
-    .cookbook-section h2 {
-            font-size: 24px;
-    
-        }
-
-    .cookbook-text p {
-        font-size: 18px;
-    }
-
-    #book-section {
-        min-height: 600px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #book-section .book-display {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .book-cover {
-        width: auto;
-        height: 100%;
-    }
-    
-    .book-cover img {
-        width: auto;
-        height: 100%;
-        margin: 0 0 20px 50px;
-        transform: scale(0.8);
-    }
-
-        
-
-    .custom-footer h5 {
-        font-size: 20px;
-    }
-    
-    .custom-footer p {
-        font-size: 14px;
-    }
-    
-    .custom-footer ul li a,
-    .custom-footer p a,
-    .custom-footer .col-12 a {
-        font-size: 14px;
-    }
-    
-    .copy {
-        font-size: 14px;
-    }
-    
-    .list-inline-item i {
-        font-size: 20px;
-    }
-}
 
 
 
@@ -1004,11 +900,11 @@ i {
         margin-right: 40px;
     }
 
-    .cookbook-text .text-box {
+   /* .cookbook-text .text-box {
         width: 100%;
         height: 450px;
     }
-
+*/
     .cookbook-text h3 {
         font-size: 24px;
     }
