@@ -968,6 +968,7 @@ i {
                     /* If you want to align it center horizontally, you can add the following: */
                     left: 50%;
                     transform: translateX(250%);
+                }
     
         p.mt-3 {
             font-size: 16px;
