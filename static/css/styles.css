@@ -601,6 +601,49 @@ i {
 
 /* Blog - Page */
 
+.hero-image-blog {
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: -20px;
+}
+
+.hero-image-section-blog img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.hero-text-blog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-text-blog h1 {
+    color: #fff;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text-blog p {
+    color: #fff;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .blog-post {
     border-bottom: 1px solid #ccc;
     padding: 20px 0;

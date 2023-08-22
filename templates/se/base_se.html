@@ -53,15 +53,18 @@
         </div>
     </nav>
 
+    {% block hero %}
     <div class="hero-image-main">
-        <h1>Roots Jamaicansk Mat & Kultur</h1>
+        <h1>Roots A Jamaicansk Mat & Kultur</h1>
         <p>By Kristian Smith</p>
     </div>
+    {% endblock %}
     
     <div class="container">
         {% block content %}
         <!-- Content from extended templates will appear here -->
         {% endblock %}
+    </div>
     </div>
     <footer class="custom-footer mt-5 py-4">
         <div class="container">
