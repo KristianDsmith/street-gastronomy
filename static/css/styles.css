@@ -216,96 +216,27 @@ section {
 }
 
 
-/* Cookbook Section */
-
-.cookbook-section {
-    background-color: #fff;
-    padding: 10px 0 60px 0;
-    position: relative;
-}
-
-.cookbook-section h2 {
-    font-size: 28px;
-    color: #333;
-    text-align: left;
-    margin: 0;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.cookbook-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #59dd2d;
-}
-
-.row.align-items-center {
-    display: flex;
-    align-items: start;
-}
-
-.cookbook-text,
-.cookbook-item {
-    flex: 1;
-    box-sizing: border-box;
-    width: 50%;
-    height: 465px;
-    position: relative;
-}
-
-.cookbook-text,
-.cookbook-item-se {
-    flex: 1;
-    box-sizing: border-box;
-    width: 50%;
-    height: 465px;
-    position: relative;
-}
-
-.cookbook-item {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-}
+/* Cookbook section */
 
 .cookbook-image {
-    width: auto;
-    max-height: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    max-width: auto; /* Reduces the image's maximum width to 80% of its container */
+    height: 422px;   /* Maintains the aspect ratio of the image */
+    margin: 0 auto; /* Centers the image if it doesn't take up full width of its container */
+    display: block; 
+
 }
 
-.cookbook-image:hover {
-    transform: scale(1.05);
+.cookbook-text-container {
+    flex: 1;
+    padding-top: 40px;
+    height: 422px;
+    box-sizing: border-box;
+    text-align: left;
+    max-width: 50%;
+    background-color: white;
 }
+/* Cookbook Section */
 
-.cookbook-text .text-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 468px;
-    position: absolute;
-    top: 0;
-}
-
-.cookbook-text h3 {
-    font-size: 24px;
-    color: #444;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.cookbook-text p {
-    font-size: 18px;
-    color: #666;
-}
 
 
 /* Recipe Section */
@@ -709,7 +640,7 @@ i {
 
 
 @media (min-width: 1025px) and (max-width: 1200px) {
-    .hero-image {
+    .hero-image-main {
         height: 400px;
     }
 
@@ -721,14 +652,6 @@ i {
         height: 400px;
     }
 
-    .cookbook-text .text-box {
-        width: auto;
-        height: 465px;
-    }
-
-    .cookbook-text p {
-        font-size: 18px;
-    }
 
     #book-section .book-cover img {
         max-width: 100%;
@@ -766,7 +689,7 @@ i {
 
 
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 992px) and (max-width: 1024px) {
     .navbar {
         padding: 0 50px;
     }
@@ -797,26 +720,6 @@ i {
 
     .welcome-section p {
         font-size: 16px;
-    }
-
-    .cookbook-section h2 {
-        font-size: 24px;
-    }
-
-    .cookbook-image {
-        width: auto;
-        height: 465px;
-        margin-left: 0;
-    }
-
-    .cookbook-text .text-box {
-        width: 100%;
-        height: 465px;
-        
-    }
-
-    .cookbook-text h3 {
-        font-size: 22px;
     }
 
     #book-section .book-cover img {
@@ -857,12 +760,12 @@ i {
 
    
 
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 991px) {
     .navbar {
         padding: 0 50px;
     }
 
-    .hero-image {
+    .hero-image-main {
         height: 400px;
     }
 
@@ -889,26 +792,6 @@ i {
     .welcome-section p {
         font-size: 16px;
     }
-
-    .cookbook-section h2 {
-        font-size: 24px;
-    }
-
-    .cookbook-image {
-        width: auto;
-        height: 450px;
-        margin-right: 40px;
-    }
-
-   /* .cookbook-text .text-box {
-        width: 100%;
-        height: 450px;
-    }
-*/
-    .cookbook-text h3 {
-        font-size: 24px;
-    }
-
     
     #book-section {
         min-height: 700px;
@@ -916,21 +799,29 @@ i {
 
     #book-section .book-cover img {
         max-width: 100%;
-        height: 550px;
+        height: 500px;
     }
 
     #book-section .book-info {
-        height: 550px;
+        display: block;
         margin-right: 20px;
+        
+    }
+
+    #book-section .btn-primary {
+        position: absolute;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-10%);
     }
 
     #book-section h3 {
-            font-size: 24px;
+            font-size: 22px;
             
         }
 
     p.mt-3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .hero-image-section-jerk {
@@ -938,7 +829,7 @@ i {
     }
 
     .hero-image-section {
-        height: 300px;
+        height: 400px;
     }
 
     .hero-text {
@@ -957,7 +848,7 @@ i {
 
 
 
-@media (min-width: 577px) and (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 768px) {
     .navbar {
         padding: 0 30px;
     }
@@ -1021,48 +912,22 @@ i {
         margin: 0;
     }
 
-    .cookbook-section {
-        min-height: 900px;
-    }
-
-    .cookbook-section .row.align-items-center {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .cookbook-section h2 {
-        font-size: 22px;
-        margin-bottom: -20px;
-    }
-
-    .cookbook-text p {
-        font-size: 16px;
-    }
-
-    .cookbook-text,
-    .cookbook-item {
-        width: 100%;
-        height: 300px;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .cookbook-text .text-box {
-        width: 100%;
-        height: 300px;
-        box-sizing: border-box;
-        position: static;
-    }
-
-    .cookbook-image {
-        width: auto;
-        height: 100%;
-        margin: 0 15px 40px 15px;
-        transform: scale(0.8);
-    }
+        .cookbook-image {
+            max-width: auto;
+            /* Reduces the image's maximum width to 80% of its container */
+            height: 322px;
+            /* Maintains the aspect ratio of the image */
+            margin: 0 auto;
+            /* Centers the image if it doesn't take up full width of its container */
+            display: block;
+    
+        }
+    
+        .cookbook-text-container {
+          height: 422px;
+          margin-top: 20px;
+            
+        }
 
     .hero-image-section-jerk {
         width: 100vw;
@@ -1156,17 +1021,17 @@ i {
     }
 
     .custom-footer h5 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .custom-footer p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .custom-footer ul li a,
     .custom-footer p a,
     .custom-footer .col-12 a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .copy {
@@ -1200,7 +1065,7 @@ i {
         font-size: 16px;
     }
 
-    .hero-image {
+    .hero-image-main {
         height: 250px;
     }
 
@@ -1239,47 +1104,11 @@ i {
         height: 825px;
 
     }
-
-    .cookbook-section {
-        min-height: 1150px;
-    }
-
-    .cookbook-section .row.align-items-center {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .cookbook-section h2 {
-        font-size: 22px;
-    }
-
-    .cookbook-text p {
-        font-size: 16px;
-    }
-
-    .cookbook-text,
-    .cookbook-item {
-        width: 100%;
-        height: 350px;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .cookbook-text .text-box {
-        width: 100%;
-        height: 350px;
-        box-sizing: border-box;
-    }
-
-    .cookbook-image {
-        width: auto;
-        height: 100%;
-        margin: 0 15px 20px 15px;
-        transform: scale(0.7);
-    }
+    
+        .cookbook-text-container {
+            margin-top: 20px;
+    
+        }
 
     .hero-image-section-jerk {
         width: 100vw;
@@ -1466,50 +1295,16 @@ i {
             max-width: 100%;
             height: 825px;
     
-        }
-    
-        .cookbook-section {
-            min-height: 1000px;
-        }
-    
-        .cookbook-section .row.align-items-center {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-        }
-    
-        .cookbook-section h2 {
-            font-size: 20px;
-        }
-    
-        .cookbook-text p {
-            font-size: 16px;
-        }
-    
-        .cookbook-text,
-        .cookbook-item {
-            width: 100%;
-            height: 575px;
-            margin-left: 0;
-            margin-right: 0;
-            padding-left: 0;
-            padding-right: 0;
-        }
-    
-        .cookbook-text .text-box {
-            width: 100%;
-            height: 575px;
-            box-sizing: border-box;
-        }
-    
-        .cookbook-image {
-            width: 350;
-            height: 400px;
-            margin: 0 15px 20px 15px;
-            transform: scale(0.8);
-        }
+        }   
 
-                
+        .cookbook-image {
+            max-width: auto;
+            height: 322px;
+        }
+        
+        .cookbook-text-container {
+            margin-top: 20px;
+        }
     
         .hero-image-section-jerk {
             width: 100vw;
@@ -1533,7 +1328,7 @@ i {
         }
     
         #book-section {
-            min-height: 900px;
+            min-height: 700px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1549,6 +1344,7 @@ i {
     
         #book-section h2 {
             font-size: 20px;
+            margin-top: -20px;
             margin-left: 15px;
         }
 
@@ -1579,6 +1375,12 @@ i {
         #book-section .book-info {
             width: 100%;
             height: auto;
+        }
+
+        #book-section .btn-primary {
+            font-size: 14px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
     
         p.mt-3 {
