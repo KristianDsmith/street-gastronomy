@@ -637,7 +637,6 @@ i {
     font-size: 44px;
     font-weight: bold;
     margin-bottom: 0;
-    
 }
 
 .hero-text-blog p {
@@ -676,7 +675,7 @@ i {
 .post-image {
     display: block;
     margin: 0 auto 20px auto;
-    width: 500px;
+    width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -1066,6 +1065,15 @@ i {
             font-size: 20px;
         }
 
+        .hero-image-section-blog {
+            height: 450px;
+        }
+
+        .hero-text-blog h1 {
+            font-size: 36px;
+                    
+        }
+
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -1257,6 +1265,15 @@ i {
     .list-inline-item i {
         font-size: 20px;
     }
+
+        .hero-image-section-blog {
+            height: 350px;
+            
+        }
+
+        .post-title {
+            font-size: 26px;
+        }
 }
 
 @media (min-width: 416px) and (max-width: 576px) {
@@ -1440,14 +1457,19 @@ i {
         font-size: 20px;
     }
 
+    .hero-image-section-blog {
+            height: 350px;
+    
+        }
+    
+    .hero-text-blog h1 {
+        font-size: 26px;
+    }
+
     .post-title {
         font-size: 20px;
     }
     
-    .post-image {
-        width: 300px;
-        height: auto;
-    }
     
         
 }
@@ -1644,14 +1666,18 @@ i {
             font-size: 20px;
         }
 
-        .post-title {
-            font-size: 18px;
-        }
+                .hero-image-section-blog {
+                    height: 250px;
         
-        .post-image {
-            width: 250px;
-            height: auto;
-        }
+                }
+        
+                .hero-text-blog h1 {
+                    font-size: 24px;
+                }
+        
+                .post-title {
+                    font-size: 16px;
+                }
     }
 
 
