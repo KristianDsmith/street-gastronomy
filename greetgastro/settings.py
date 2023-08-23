@@ -31,9 +31,13 @@ LOCALE_PATHS = (
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-kristiandsmith-street-ga-m76ph0w6z4.us2.codeanyapp.com', 'street-gastronomy-251686042e70.herokuapp.com']
+
+
 
 
 # Application definition
