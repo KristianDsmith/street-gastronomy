@@ -35,7 +35,8 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-kristiandsmith-street-ga-m76ph0w6z4.us2.codeanyapp.com', 'street-gastronomy-251686042e70.herokuapp.com']
+ALLOWED_HOSTS = ['www.streetgastronomy.se', '8000-kristiandsmith-street-ga-m76ph0w6z4.us2.codeanyapp.com',
+                 'street-gastronomy-251686042e70.herokuapp.com', 'streetgastronomy.se' ]
 
 
 
