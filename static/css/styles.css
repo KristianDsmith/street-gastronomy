@@ -601,17 +601,19 @@ i {
 
 /* Blog - Page */
 
-.hero-image-blog {
-    width: 100vw;
-    height: 500px;
-    overflow: hidden;
-    box-sizing: border-box;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-bottom: -20px;
+.hero-image-section-blog {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('https://res.cloudinary.com/dqe39dixt/image/upload/v1692803575/sunset-ibiza_zvsijp.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        position: relative;
 }
 
 .hero-image-section-blog img {
@@ -635,25 +637,30 @@ i {
     font-size: 44px;
     font-weight: bold;
     margin-bottom: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .hero-text-blog p {
     color: #fff;
     font-size: 36px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
 }
 
 .blog-post {
     border-bottom: 1px solid #ccc;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 .post-title {
     margin: 0;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     color: #333;
-    text-decoration: underline #59dd2d; 
+    padding-bottom: 3px;
+    /* This creates the space */
+    border-bottom: 3px solid #59dd2d;
+    display: inline-block;
+    /* This makes sure the border only takes the width of the content */
 }
 
 .read-more-btn {
