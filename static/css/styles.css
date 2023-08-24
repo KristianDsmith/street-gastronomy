@@ -221,8 +221,9 @@ section {
 .cookbook-image {
     max-width: auto; /* Reduces the image's maximum width to 80% of its container */
     height: 422px;   /* Maintains the aspect ratio of the image */
-    margin: 0 auto; /* Centers the image if it doesn't take up full width of its container */
+    
     display: block; 
+    
 
 }
 
@@ -801,6 +802,13 @@ i {
         font-size: 24px;
     }
 
+    #book-section .btn-primary {
+        position: absolute;
+        bottom: 55px;
+        left: 87%;
+        transform: translateX(-10%);
+    }
+
     .copy {
             font-size: 14px;
         }
@@ -1008,16 +1016,12 @@ i {
             height: auto;
         }
 
-                #book-section .btn-primary {
-                    height: [desired-height];
-                    /* Replace [desired-height] with your chosen height, e.g., 40px */
-                    position: absolute;
-                    bottom: 60px;
-                    /* This will push the button 10px above from the bottom edge */
-                    /* If you want to align it center horizontally, you can add the following: */
-                    left: 50%;
-                    transform: translateX(250%);
-                }
+        #book-section .btn-primary {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(250%);
+        }
     
         p.mt-3 {
             font-size: 16px;
@@ -1174,55 +1178,61 @@ i {
         font-size: 14px;
     }
 
-    #book-section {
-        min-height: 900px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+#book-section {
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    }
+#book-section .book-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-    #book-section .book-display {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+#book-section h2 {
+    font-size: 22px;
+    margin-left: 15px;
+}
 
-    #book-section h2 {
-            font-size: 22px;
-            margin-left: 15px;
-        }
+#book-section h3 {
+    font-size: 22px;
+}
 
-         #book-section h3 {
-            font-size: 22px;
-            
-        }
+.book-cover {
+    width: auto;
+    height: 100%;
+}
 
-    .book-cover {
-        width: auto;
-        height: 100%;
-    }
+.book-cover img {
+    width: auto;
+    height: 100%;
+    margin: 0 20px 0 50px;
+}
 
-    .book-cover img {
-        width: auto;
-        height: 100%;
-        margin: 0 20px 0 50px;
-    }
+#book-section .container {
+    padding-left: 0;
+    padding-right: 0;
+}
 
-    #book-section .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
+#book-section .book-info {
+    width: 100%;
+}
 
-    #book-section .book-info {
-        width: 100%;
-        height: auto;
-    }
+p.mt-3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
-    p.mt-3 {
-        font-size: 16px;
-    }
+#book-section .btn-primary {
+    display: block;
+    margin: 20px auto 0;
+    position: static;
+    transform: none;
+}
 
     .hero-image-section {
         height: 300px;
@@ -1338,10 +1348,9 @@ i {
 
     }
     
-        .cookbook-text-container {
-            margin-top: 20px;
-    
-        }
+    .cookbook-text-container {
+        margin-top: 20px;
+    }
 
     .hero-image-section-jerk {
         width: 100vw;
@@ -1416,6 +1425,13 @@ i {
         font-size: 16px;
     }
 
+    #book-section .btn-primary {
+        display: block;
+        margin: 20px auto 0;
+        position: static;
+        transform: none;
+    }
+
     .hero-image-section {
         height: 300px;
     }
@@ -1458,7 +1474,7 @@ i {
     }
 
     .hero-image-section-blog {
-            height: 350px;
+            height: 250px;
     
         }
     
@@ -1624,6 +1640,13 @@ i {
         p.mt-3 {
             font-size: 16px;
         }
+
+        #book-section .btn-primary {
+            display: block;
+            margin: 20px auto 0;
+            position: static;
+            transform: none;
+        }
     
         .hero-image-section {
             height: 200px;
@@ -1667,17 +1690,31 @@ i {
         }
 
         .hero-image-section-blog {
-            height: 250px;
+            height: 200px;
+        }
         
-                }
+        .hero-text-blog h1 {
+            font-size: 18px;
+        }
         
-                .hero-text-blog h1 {
-                    font-size: 18px;
-                }
-        
-                .post-title {
-                    font-size: 16px;
-                }
+        .post-title {
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (min-width: 355px) and (max-width: 383px) {
+    
+        .hero-image-section-blog {
+            height: 200px;
+        }
+            
+        .hero-text-blog h1 {
+            font-size: 16px;
+        }
+            
+        .post-title {
+            font-size: 16px;
+        }
     }
 
 
